@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -c ' *)",
+      "Bash(npm --version)",
+      "Bash(npm install *)",
+      "Bash(node -e \"require\\('./server/utils/csvParser'\\); console.log\\('csvParser OK'\\)\")",
+      "Bash(node -e \"require\\('./server/routes/import'\\); console.log\\('import routes OK'\\)\")",
+      "Bash(node server/app.js)",
+      "Bash(node -e ' *)",
+      "Bash(curl -s -X POST http://localhost:3000/api/import/upload-settlement -F \"file=@word/test.xlsx\" -F \"fileType=tmall_settlement\")",
+      "Bash(curl -s \"http://localhost:3000/api/import/settlement-stats\")",
+      "Bash(node -e \"let d='';process.stdin.on\\('data',c=>d+=c\\);process.stdin.on\\('end',\\(\\)=>console.log\\(JSON.stringify\\(JSON.parse\\(d\\),null,2\\)\\)\\)\")",
+      "Bash(curl -s \"http://localhost:3000/api/import/settlement-detail?status=settled&page=1&pageSize=5\")",
+      "Bash(curl -s -X DELETE http://localhost:3000/api/import/settlement-all)",
+      "Bash(curl -s http://localhost:5173/)",
+      "Bash(node -e \"require\\('./server/utils/csvParser'\\); require\\('./server/routes/import'\\); require\\('./server/routes/refund'\\); require\\('./server/routes/expense'\\); console.log\\('All server modules load OK'\\)\")",
+      "Bash(taskkill //F //IM node.exe)"
+    ]
+  }
+}

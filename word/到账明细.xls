@@ -1,0 +1,4522 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet" xmlns:html="http://www.w3.org/TR/REC-html40">
+  <Styles>
+    <Style ss:ID="Default" ss:Name="Normal">
+      <Alignment ss:Vertical="Center"/>
+      <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+    </Style>
+    <Style ss:ID="sshortDate">
+      <NumberFormat ss:Format="Short Date"/>
+    </Style>
+    <Style ss:ID="snormalDate">
+      <NumberFormat ss:Format="yyyy/m/d\ h:mm;@"/>
+    </Style>
+    <Style ss:ID="smoneyStyle">
+      <NumberFormat ss:Format="Standard"/>
+    </Style>
+  </Styles>
+  <Null/>
+  <Worksheet ss:Name="卖出交易1">
+    <Null/>
+    <Table ss:ExpandedColumnCount="100" ss:ExpandedRowCount="1000000" ss:DefaultColumnWidth="54.0" ss:DefaultRowHeight="13.5">
+      <Null/><Row>
+  <Cell>
+    <Data ss:Type="String">#账号：2933950981@qq.com[20889414049651720156]</Data>
+  </Cell>
+</Row><Row>
+  <Cell>
+    <Data ss:Type="String">#查询起始日期：2026-03-02 00:00:00查询终止日期：2026-03-10 00:00:00</Data>
+  </Cell>
+</Row><Row>
+  <Cell>
+    <Data ss:Type="String">序号</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">创建时间</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">支付时间</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">商品名称</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">商户订单号</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">支付宝交易号</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">对方账户</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">对方名称</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">订单金额(元)</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">退款金额(元)</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">服务费(元)</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">交易状态</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">退服务费(元)</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">商家实收(元)</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">商家优惠(元)</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">分公司</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">银行订单号</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">交易分类</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">交易方式</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">门店</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">商家实退(元)</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">账期待收款（元）</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">已收款分期数</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">付款备注</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">结算方式</Data>
+  </Cell>
+</Row><Row>
+  <Cell>
+    <Data ss:Type="String">1</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-09 19:23:44</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-09 19:23:47</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">浦下防爆红外线测温枪充电款手持式高精度电子温度计工业测温仪</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">T200P4502119428090013841</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030923001127201424117026</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">138******27</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">**福</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">219.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">成功</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">219.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030993736832510520090301400</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">淘宝</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">担保交易</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+</Row><Row>
+  <Cell>
+    <Data ss:Type="String">2</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-09 19:18:23</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-09 19:18:27</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">【活动价】浦下防爆电动扳手铜套筒无刷大扭力电锤角磨机多功能冲击电钻电镐</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">T200P4502120005100013841</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030923001127201424418024</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">138******27</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">**福</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">835.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">成功</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">835.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030993738098600520090100808</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">淘宝</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">担保交易</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+</Row><Row>
+  <Cell>
+    <Data ss:Type="String">3</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-09 18:30:46</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-09 18:30:49</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">浦下防爆红外线测温枪充电款手持式高精度电子温度计工业测温仪</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">T200P4502117305103013841</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030923001127201424117017</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">138******27</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">**福</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">139.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">139.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">关闭</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030993738068130520090101101</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">淘宝</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">担保交易</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+</Row><Row>
+  <Cell>
+    <Data ss:Type="String">4</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-09 18:28:05</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-09 18:28:10</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">浦下防爆万用表电工专用数字高精度全自动数显式智能防烧电流表 等多件</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">T200P4502114822091023023</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030923001127201423153118</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">138******27</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">**福</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">1913.56</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">成功</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">1913.56</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030993731591960520090200809</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">淘宝</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">担保交易</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+</Row><Row>
+  <Cell>
+    <Data ss:Type="String">5</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-09 17:00:48</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-09 17:02:11</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">浦下防爆万用表电工专用数字高精度全自动数显式智能防烧电流表</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">T200P3285570507361178568</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030923001123771416441935</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">241***@qq.com</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">**评</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">966.56</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">成功</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">966.56</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030987096380950577090200207</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">淘宝</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">担保交易</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+</Row><Row>
+  <Cell>
+    <Data ss:Type="String">6</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-09 15:25:46</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-09 15:27:01</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">【活动价】浦下防爆手电钻化工厂维修起子无刷电机冲击钻打孔工业电动螺丝刀</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">T200P4502112806103023045</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030922001182391418874295</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">188******08</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">**远</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2457.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">成功</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2457.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030983616739770539090210703</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">淘宝</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">担保交易</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+</Row><Row>
+  <Cell>
+    <Data ss:Type="String">7</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-09 13:19:27</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-09 13:19:33</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">【活动价】浦下防爆手电钻化工厂维修起子无刷电机冲击钻打孔工业电动螺丝刀</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">T200P4502108955084009720</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030922001172991449219486</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">136******35</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">**鹏</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">3057.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">成功</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">3057.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">淘宝</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">担保交易</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+</Row><Row>
+  <Cell>
+    <Data ss:Type="String">8</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-09 13:07:17</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-09 13:07:43</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">浦下防爆电动扳手无刷大扭力轮胎汽修工具化工厂风炮套筒冲击扳手</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">T200P4502115543086050648</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030923001110981433409076</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">135******88</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">**兴</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">1540.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">成功</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">1540.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030985686724150598090100806</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">淘宝</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">担保交易</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+</Row><Row>
+  <Cell>
+    <Data ss:Type="String">9</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-09 12:36:34</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">商家红包</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">11120600726030902624080519809</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030923001348851452111720</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">131******73</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">**炜</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">153.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">成功</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">外部商户</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">即时到帐</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+</Row><Row>
+  <Cell>
+    <Data ss:Type="String">10</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-09 09:57:50</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-09 09:58:07</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">防爆铜合金套筒无火花架子工用1/2铝青铜套筒电动扳手套筒头配件 等多件</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">T200P4502108448084034238</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030922001191391408253863</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">134******02</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">**彬</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2820.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">成功</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2820.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">淘宝</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">担保交易</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+</Row><Row>
+  <Cell>
+    <Data ss:Type="String">11</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-09 09:45:23</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">【活动价】浦下防爆电动扳手铜套筒无刷大扭力电锤角磨机多功能冲击电钻电镐</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">T200P4502114425083034238</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030922001191391409893779</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">134******02</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">**彬</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">835.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">关闭</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">淘宝</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">担保交易</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+</Row><Row>
+  <Cell>
+    <Data ss:Type="String">12</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-08 15:09:36</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-08 15:09:57</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">浦下防爆水平仪自动调平高精度强光激光工地建筑厂房建设石油化工</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">T200P4502119428048004749</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030823001123841447340190</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">187******71</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">**明</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">984.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">984.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">关闭</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030882817809080584090311206</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">淘宝</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">担保交易</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+</Row><Row>
+  <Cell>
+    <Data ss:Type="String">13</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-08 13:38:19</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">浦下防爆电动扳手无刷大扭力轮胎汽修工具化工厂风炮套筒冲击扳手</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">T200P4502118279043019230</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030822001188521433670851</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">138******84</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">**玉</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">770.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">关闭</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">淘宝</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">担保交易</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+</Row><Row>
+  <Cell>
+    <Data ss:Type="String">14</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-08 11:06:12</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">浦下防爆电动扳手无刷大扭力轮胎汽修工具化工厂风炮套筒冲击扳手</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">T200P3282640286294652353</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030822001178851436400485</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">qix***@126.com</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">**英</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">770.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">关闭</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">淘宝</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">担保交易</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+</Row><Row>
+  <Cell>
+    <Data ss:Type="String">15</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-08 11:03:50</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-08 11:22:20</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">【活动价】浦下防爆电动扳手铜套筒无刷大扭力电锤角磨机多功能冲击电钻电镐</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">T200P3282594207648784358</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030823001141911438716761</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">183******47</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">**鹏</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">835.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">成功</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">835.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030881286372380591090110900</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">淘宝</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">担保交易</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+</Row><Row>
+  <Cell>
+    <Data ss:Type="String">16</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-08 09:09:59</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-08 09:10:09</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">浦下防爆电动扳手无刷大扭力轮胎汽修工具化工厂风炮套筒冲击扳手</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">T200P4502106324054013800</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030823001138881427484881</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">158******22</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">**锋</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">790.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">成功</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">790.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030885292284230588090300005</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">淘宝</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">担保交易</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+</Row><Row>
+  <Cell>
+    <Data ss:Type="String">17</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-07 18:22:45</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-07 18:22:49</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">浦下防爆温湿度计工业高清LED大屏看板高精度车间石油化工场所</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">T200P3281985876528253593</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030723001100231455955525</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">135******89</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">**锋</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">175.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">成功</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">175.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">淘宝</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">担保交易</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+</Row><Row>
+  <Cell>
+    <Data ss:Type="String">18</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-07 18:16:54</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-07 18:16:59</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">浦下防爆手电钻无刷电机化工厂冲击钻孔电起子工业手持电动螺丝刀</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">T200P4502113129032106504</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030722001196801453892483</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">137******33</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">*恒</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">5655.95</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">成功</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">5655.95</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">淘宝</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">担保交易</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+</Row><Row>
+  <Cell>
+    <Data ss:Type="String">19</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-07 14:45:02</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-07 14:45:08</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">【活动价】浦下防爆角磨机无刷锂电切割抛光机电动磨光机手砂轮多功能打磨机</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">T200P3281499840991206375</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030723001138611410746055</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">139******21</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">*杨</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">882.63</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">成功</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">882.63</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">淘宝</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">担保交易</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+</Row><Row>
+  <Cell>
+    <Data ss:Type="String">20</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-07 13:01:57</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-07 13:02:03</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">浦下防爆电动扳手无刷大扭力轮胎汽修工具化工厂风炮套筒冲击扳手</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">T200P4502119429015011623</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030723001118251425280946</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">138******38</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">**桂</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">770.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">成功</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">770.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030791601140810525090110301</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">淘宝</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">担保交易</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+</Row><Row>
+  <Cell>
+    <Data ss:Type="String">21</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-07 13:01:24</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-07 13:01:34</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">防爆铜合金套筒无火花架子工用1/2铝青铜套筒电动扳手套筒头配件</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">T200P4502109960027002441</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030723001118251425537943</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">138******38</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">**桂</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">88.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">成功</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">88.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030791597173240525090310204</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">淘宝</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">担保交易</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+</Row><Row>
+  <Cell>
+    <Data ss:Type="String">22</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-07 11:00:34</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-07 11:00:38</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">防爆铜合金套筒无火花架子工用1/2铝青铜套筒电动扳手套筒头配件 等多件</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">T200P3280743949448594786</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030722001179941412880262</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">ntw***@126.com</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">*健</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">217.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">成功</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">217.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">淘宝</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">担保交易</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+</Row><Row>
+  <Cell>
+    <Data ss:Type="String">23</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-07 10:25:05</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-07 10:25:06</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">浦下防爆电动扳手无刷大扭力轮胎汽修工具化工厂风炮套筒冲击扳手</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">T200P4502117127017039845</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030723001108611410977974</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">188******78</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">*勇</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">790.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">成功</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">790.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030784705021500561090100307</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">淘宝</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">担保交易</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+</Row><Row>
+  <Cell>
+    <Data ss:Type="String">24</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-07 01:42:02</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">浦下防爆手电钻无刷电机化工厂冲击钻孔电起子工业手持电动螺丝刀</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">T200P3279897159124527192</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030723001119021444815937</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">136******87</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">**丛</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">1862.42</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">关闭</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">淘宝</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">担保交易</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+</Row><Row>
+  <Cell>
+    <Data ss:Type="String">25</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-06 17:11:19</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-06 17:11:27</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">【活动价】浦下防爆红外线测温枪手持式高精度冶炼铸造电子温度计工业测温仪</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">T200P4502099342110036339</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030622001188831452277914</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">133******20</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">*军</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">263.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">263.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">关闭</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">淘宝</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">担保交易</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+</Row><Row>
+  <Cell>
+    <Data ss:Type="String">26</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-06 14:39:14</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">商家红包</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">11140600726030621253363519809</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030623001348851437960201</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">131******73</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">**炜</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">139.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">成功</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">外部商户</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">即时到帐</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+</Row><Row>
+  <Cell>
+    <Data ss:Type="String">27</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-06 14:06:44</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-06 14:06:50</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">浦下防爆电动扳手无刷大扭力轮胎汽修工具化工厂风炮套筒冲击扳手</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">T200P4502092860095032017</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030623001105901416932663</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">134******51</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">**湘</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">770.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">成功</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">770.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0306b10759859056</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">淘宝</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">担保交易</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+</Row><Row>
+  <Cell>
+    <Data ss:Type="String">28</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-06 12:35:49</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-06 12:36:06</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">浦下防爆电锤无刷电机锂电仓库混凝土工业级防爆冲击钻电镐多功能</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">T200P5098149614842010225</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030623001124551441466950</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">132******61</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">**飞</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">1012.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">成功</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">1012.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0306b35903055500</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">淘宝</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">担保交易</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+</Row><Row>
+  <Cell>
+    <Data ss:Type="String">29</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-05 21:32:11</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-05 21:32:23</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">防爆铜合金套筒无火花架子工用1/2铝青铜套筒电动扳手套筒头配件</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">T200P3277602518541060450</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030522001168891428122679</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">189******83</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">**红</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">420.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">成功</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">420.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030582441642750589090310309</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">淘宝</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">担保交易</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+</Row><Row>
+  <Cell>
+    <Data ss:Type="String">30</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-05 21:30:56</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-05 21:31:56</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">浦下防爆电动扳手无刷大扭力轮胎汽修工具化工厂风炮套筒冲击扳手</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">T200P3277566843444060450</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030522001168891427716771</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">189******83</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">**红</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">3160.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">成功</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">3160.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030582438476160589090111303</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">淘宝</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">担保交易</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+</Row><Row>
+  <Cell>
+    <Data ss:Type="String">31</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-05 16:35:04</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-05 16:35:11</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">浦下防爆温湿度计工业高清LED大屏看板高精度车间石油化工场所</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">T200P4502079363093013433</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030522001186531453962607</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">182***@163.com</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">**淑</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">175.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">成功</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">175.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030583757885950553090101105</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">淘宝</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">担保交易</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+</Row><Row>
+  <Cell>
+    <Data ss:Type="String">32</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-05 14:34:39</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-05 14:35:23</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">浦下防爆抽油泵抽液泵电动220V大功率耐腐蚀石油化工生产车间场所</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">T200P3277206661155766876</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030523001125191456020081</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">g19***@163.com</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">**保</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">703.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">成功</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">703.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">淘宝</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">担保交易</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+</Row><Row>
+  <Cell>
+    <Data ss:Type="String">33</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-05 13:46:02</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">浦下防爆电动扳手无刷大扭力轮胎汽修工具化工厂风炮套筒冲击扳手</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">T200P5097123792231512528</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030523001120831456885782</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">155******66</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">**阳</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">1580.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">关闭</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">淘宝</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">担保交易</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+</Row><Row>
+  <Cell>
+    <Data ss:Type="String">34</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-05 13:39:09</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-05 13:40:57</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">防爆铜合金套筒无火花架子工用1/2铝青铜套筒电动扳手套筒头配件</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">T200P5096918738024512528</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030523001120831456798234</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">155******66</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">**阳</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">506.40</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">422.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">成功</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">506.40</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030582121883640583090210602</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">淘宝</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">担保交易</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">422.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+</Row><Row>
+  <Cell>
+    <Data ss:Type="String">35</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-05 11:40:40</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-05 11:41:11</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">防爆铜合金套筒无火花架子工用1/2铝青铜套筒电动扳手套筒头配件 等多件</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">T200P3276939000050789689</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030522001181121449787584</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">355***@qq.com</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">*浩</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">324.40</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">成功</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">324.40</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030586207661350512090301108</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">淘宝</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">担保交易</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+</Row><Row>
+  <Cell>
+    <Data ss:Type="String">36</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-05 10:36:25</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-05 10:36:33</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">浦下防爆温湿度计工业高清LED大屏看板高精度车间石油化工场所</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">T200P5096576990985208120</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030522001154371409874228</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">150******88</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">**琳</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">175.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">成功</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">175.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030583205517290537090300206</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">淘宝</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">担保交易</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+</Row><Row>
+  <Cell>
+    <Data ss:Type="String">37</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-04 16:55:33</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-04 16:55:43</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">浦下防爆红外线测温枪充电款手持式高精度电子温度计工业测温仪</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">T200P4502097182072022930</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030423001104011438907630</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">139******86</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">**梅</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">278.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">成功</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">278.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030485418222720501090311405</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">淘宝</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">担保交易</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+</Row><Row>
+  <Cell>
+    <Data ss:Type="String">38</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-04 16:14:32</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-04 16:14:40</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">【活动价】浦下防爆手电钻化工厂维修起子无刷电机冲击钻打孔工业电动螺丝刀</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">T200P3275006019679628887</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030422001183171450822832</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">155***@163.com</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">**刚</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2038.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">成功</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2038.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030484622550670517090201108</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">淘宝</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">担保交易</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+</Row><Row>
+  <Cell>
+    <Data ss:Type="String">39</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-04 16:01:50</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-04 16:02:13</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">浦下防爆温湿度计工业高清LED大屏看板高精度车间石油化工场所</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">T200P3275536584951390758</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030423001140671420713006</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">132***@163.com</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">**力</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">298.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">298.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">关闭</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030486143543190567090100100</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">淘宝</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">担保交易</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+</Row><Row>
+  <Cell>
+    <Data ss:Type="String">40</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-04 15:08:59</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-04 15:09:29</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">浦下防爆抽油泵抽液泵电动220V大功率耐腐蚀石油化工生产车间场所</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">T200P3274899099573848281</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030423001100891419049457</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">157******52</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">*燕</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">703.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">成功</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">703.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">20260304000000000000271609588909</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">淘宝</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">担保交易</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+</Row><Row>
+  <Cell>
+    <Data ss:Type="String">41</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-04 13:44:22</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-04 13:44:38</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">浦下防爆电动扳手无刷大扭力轮胎汽修工具化工厂风炮套筒冲击扳手</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">T200P3275310288432072654</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030423001133891409286680</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">102***@qq.com</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">**清</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">1696.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">成功</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">1696.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">淘宝</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">担保交易</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+</Row><Row>
+  <Cell>
+    <Data ss:Type="String">42</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-04 09:17:31</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-04 09:17:32</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">邮费/配件/补差价/补拍链接</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">T200P3274695120111006154</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030423001115121432537700</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">137******81</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">**华</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">265.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">成功</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">265.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030486069671010512090311003</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">淘宝</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">担保交易</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+</Row><Row>
+  <Cell>
+    <Data ss:Type="String">43</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-03 19:23:30</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-03 19:24:05</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">【活动价】浦下防爆角磨机无刷锂电切割抛光机电动磨光机手砂轮多功能打磨机</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">T200P3273913093092817578</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030322001164281426615471</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">153******08</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">**文</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">4870.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">成功</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">4870.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">淘宝</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">担保交易</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+</Row><Row>
+  <Cell>
+    <Data ss:Type="String">44</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-03 13:26:07</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-03 13:26:16</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">【活动价】浦下防爆电动扳手铜套筒无刷大扭力电锤角磨机多功能冲击电钻电镐 等多件</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">T200P5094060084260076025</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030323001122441423813965</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">133***@163.com</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">*敏</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">1793.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">成功</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">1793.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">淘宝</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">担保交易</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+</Row><Row>
+  <Cell>
+    <Data ss:Type="String">45</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-03 12:27:33</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-03 12:28:05</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">浦下防爆电动扳手无刷大扭力轮胎汽修工具化工厂风炮套筒冲击扳手</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">T200P5093564007071231634</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030323001118501431842863</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">152******55</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">**巍</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">3392.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">成功</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">3392.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0303b01252455060</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">淘宝</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">担保交易</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+</Row><Row>
+  <Cell>
+    <Data ss:Type="String">46</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-03 12:06:32</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-03 12:06:37</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">浦下防爆电动扳手大扭力冲击电风炮重型电动工具无刷电机锂电扳手</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">T200P5093978689572839229</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030322001178411445209549</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">875***@qq.com</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">**刚</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">853.44</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">成功</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">853.44</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">淘宝</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">担保交易</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+</Row><Row>
+  <Cell>
+    <Data ss:Type="String">47</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-03 11:49:29</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-03 11:49:33</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">防爆铜合金套筒无火花架子工用1/2铝青铜套筒电动扳手套筒头配件</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">T200P5093832348540347820</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030323001121861459699816</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">183******09</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">**康</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">291.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">成功</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">291.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0303b15538258679</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">淘宝</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">担保交易</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+</Row><Row>
+  <Cell>
+    <Data ss:Type="String">48</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-03 11:48:04</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-03 11:48:06</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">防爆铜合金套筒无火花架子工用1/2铝青铜套筒电动扳手套筒头配件</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">T200P5093445063949347820</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030323001121861400071064</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">183******09</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">**康</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">97.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">97.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">关闭</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030382660002920586090100800</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">淘宝</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">担保交易</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+</Row><Row>
+  <Cell>
+    <Data ss:Type="String">49</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-03 10:45:51</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-03 10:46:48</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">浦下防爆抽油泵抽液泵电动220V大功率耐腐蚀石油化工生产车间场所</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">T200P3272335286636788674</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030322001151791452210225</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">dul***@yahoo.cn</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">**英</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">703.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">成功</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">703.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">淘宝</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">担保交易</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+</Row><Row>
+  <Cell>
+    <Data ss:Type="String">50</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-03 08:42:30</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-03 08:42:37</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">浦下防爆温湿度计工业高清LED大屏看板高精度车间石油化工场所</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">T200P5093499888317621012</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030322001186591458994559</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">chenyanling@truthhefei.com</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">致真精密设备(杭州)有限公司</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">298.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">成功</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">298.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">淘宝</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">担保交易</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+</Row><Row>
+  <Cell>
+    <Data ss:Type="String">51</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-02 17:02:27</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-02 17:02:41</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">浦下防爆手电钻无刷电机化工厂冲击钻孔电起子工业手持电动螺丝刀 等多件</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">T200P3271731816551433388</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030222001170981457678245</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">182******13</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">**亚</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">1984.63</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">成功</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">1984.63</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">淘宝</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">担保交易</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+</Row><Row>
+  <Cell>
+    <Data ss:Type="String">52</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-02 16:51:45</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">浦下防爆电锤无刷电机锂电带冲击工业电钻冲击钻孔工地电镐多功能</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">T200P3271602865033032597</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030222001186591454474599</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">191******29</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">**科</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">1012.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">关闭</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">淘宝</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">担保交易</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+</Row><Row>
+  <Cell>
+    <Data ss:Type="String">53</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-02 16:21:33</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-02 16:21:39</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">【活动价】浦下防爆鼠标无线双模连接操作灵活抗干扰证书齐全石油化工厂专用</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">T200P3271647972779520958</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030222001187101436516872</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">181******14</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">*青</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">350.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">成功</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">350.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0302b39545051049</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">淘宝</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">担保交易</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+</Row><Row>
+  <Cell>
+    <Data ss:Type="String">54</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-02 14:47:04</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-02 14:47:11</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">浦下防爆抽液泵抽油泵电动220V大功率耐腐蚀石油化工生产车间场所</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">T200P5092249178755896923</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030223001107051403773036</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">131******52</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">**梅</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">703.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">成功</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">703.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030295253443390505090100003</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">淘宝</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">担保交易</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+</Row><Row>
+  <Cell>
+    <Data ss:Type="String">55</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-02 14:23:56</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-02 14:24:04</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">补差价专用</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">T200P3271323289711099666</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030223001138741452010335</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">139******33</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">**冠</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">60.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">成功</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">60.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030285935198840574090200601</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">淘宝</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">担保交易</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+</Row><Row>
+  <Cell>
+    <Data ss:Type="String">56</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-02 13:21:17</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-02 13:21:22</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">【活动价】浦下防爆手电钻化工厂维修起子无刷电机冲击钻打孔工业电动螺丝刀</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">T200P3270781310155352671</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030222001157401442610897</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">760***@qq.com</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">**梅</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">1019.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">成功</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">1019.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030288567068750540090310707</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">淘宝</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">担保交易</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+</Row><Row>
+  <Cell>
+    <Data ss:Type="String">57</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-02 12:16:54</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-02 12:22:02</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">【活动价】浦下防爆角磨机无刷锂电切割抛光机电动磨光机手砂轮多功能打磨机</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">T200P3270632666237099666</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030223001138741454030819</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">139******33</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">**冠</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">1910.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">成功</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">1910.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030285930800130574090201006</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">淘宝</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">担保交易</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+</Row><Row>
+  <Cell>
+    <Data ss:Type="String">58</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-02 11:08:21</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026-03-02 11:08:35</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">【活动价】浦下防爆电动扳手无刷电机大扭力锂电工厂套筒风炮充电动汽修工具</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">T200P3270417818270583154</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">2026030223001136251403646481</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">138******78</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">**超</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">1689.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">成功</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">1689.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">淘宝</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">担保交易</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String">0.00</Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+  <Cell>
+    <Data ss:Type="String"> </Data>
+  </Cell>
+</Row><Row>
+  <Cell>
+    <Data ss:Type="String">#导出时间：2026-04-24 16:21:03</Data>
+  </Cell>
+</Row>
+    </Table>
+  </Worksheet>
+</Workbook>
