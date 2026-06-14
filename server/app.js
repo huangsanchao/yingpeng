@@ -30,6 +30,17 @@ app.use('/api/base', authMiddleware, require('./routes/baseData'));
 
 app.use('/uploads', express.static(path.join(__dirname, '..', config.UPLOAD_DIR.replace('./server/', ''))));
 
+// Serve frontend static files in production
+const clientDist = path.join(__dirname, '..', 'client', 'dist');
+if (require('fs').existsSync(clientDist)) {
+  app.use(express.static(clientDist));
+  app.get('*', (req, res) => {
+    if (!req.path.startsWith('/api') && !req.path.startsWith('/uploads')) {
+      res.sendFile(path.join(clientDist, 'index.html'));
+    }
+  });
+}
+
 app.listen(config.PORT, () => {
   console.log(`Server running on port ${config.PORT}`);
   // Daily auto-backup at 2:00 AM

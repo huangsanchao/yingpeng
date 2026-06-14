@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "nodemon server/app.js",
     "start": "node server/app.js",
+    "build": "cd client && npm install && npm run build",
     "clear-data": "node server/scripts/clearData.js",
     "create-test-user": "node server/scripts/createTestUser.js"
   },
