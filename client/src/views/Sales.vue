@@ -2,75 +2,74 @@
   <div class="page">
     <div class="toolbar">
       <div class="filter-bar">
-        <el-select v-model="month" placeholder="选择月份" style="width:150px" @change="loadData">
-          <el-option v-for="m in months" :key="m" :label="m" :value="m" />
+        <el-date-picker
+          v-model="dateRange"
+          type="daterange"
+          range-separator="至"
+          start-placeholder="开始日期"
+          end-placeholder="结束日期"
+          style="width:260px"
+          @change="loadData"
+          value-format="YYYY-MM-DD"
+        />
+        <el-select v-model="salesperson" placeholder="销售员" style="width:110px;margin-left:10px" @change="loadData" clearable>
+          <el-option label="全部" value="" />
+          <el-option v-for="s in salespeopleList" :key="s.name" :label="s.name" :value="s.name" />
         </el-select>
-        <el-select v-model="platform" placeholder="选择平台" style="width:110px;margin-left:10px" @change="loadData">
+        <el-select v-model="platform" placeholder="平台" style="width:110px;margin-left:10px" @change="loadData">
           <el-option label="全部" value="all" />
-          <el-option label="天猫" value="tmall" />
-          <el-option label="京东" value="jd" />
+          <el-option v-for="p in platformsList" :key="p.name" :label="p.name" :value="p.name" />
         </el-select>
-        <el-select v-model="matchStatus" placeholder="到账状态" style="width:110px;margin-left:10px" @change="loadData">
-          <el-option label="全部" value="all" />
-          <el-option label="已到账" value="settled" />
-          <el-option label="未到账" value="pending" />
-        </el-select>
-        <el-input v-model="orderNo" placeholder="搜索订单号" style="width:200px;margin-left:10px" clearable @keyup.enter="loadData" @clear="loadData" />
+        <el-input v-model="contractNo" placeholder="搜索合同编号" style="width:200px;margin-left:10px" clearable @keyup.enter="loadData" @clear="loadData" />
       </div>
       <div class="btn-bar">
-        <el-button type="success" @click="showOrderDialog = true">
+        <el-button type="primary" @click="showAddDialog = true">
+          <el-icon style="margin-right:4px"><Plus /></el-icon>
+          新增合同
+        </el-button>
+        <el-button type="warning" @click="showOrderDialog = true">
           <el-icon style="margin-right:4px"><Upload /></el-icon>
           导入订单
+        </el-button>
+        <el-button type="success" @click="handleExport">
+          <el-icon style="margin-right:4px"><Download /></el-icon>
+          导出Excel
         </el-button>
       </div>
     </div>
 
     <el-row :gutter="16" class="kpi-row">
-      <el-col :span="8"><el-card shadow="hover"><div class="kpi"><div class="kpi-label">订单总数</div><div class="kpi-value">{{ stats.total }}</div></div></el-card></el-col>
-      <el-col :span="8"><el-card shadow="hover"><div class="kpi"><div class="kpi-label">已到账</div><div class="kpi-value" style="color:#67c23a">{{ stats.settled }}</div></div></el-card></el-col>
-      <el-col :span="8"><el-card shadow="hover"><div class="kpi"><div class="kpi-label">未到账</div><div class="kpi-value" style="color:#e6a23c">{{ stats.pending }}</div></div></el-card></el-col>
+      <el-col :span="6"><el-card shadow="hover"><div class="kpi"><div class="kpi-label">合同总数</div><div class="kpi-value">{{ total }}</div></div></el-card></el-col>
+      <el-col :span="6"><el-card shadow="hover"><div class="kpi"><div class="kpi-label">总金额</div><div class="kpi-value" style="color:#67c23a">¥{{ fmt(totalAmount) }}</div></div></el-card></el-col>
+      <el-col :span="6"><el-card shadow="hover"><div class="kpi"><div class="kpi-label">实际金额</div><div class="kpi-value" style="color:#409eff">¥{{ fmt(actualAmount) }}</div></div></el-card></el-col>
+      <el-col :span="6"><el-card shadow="hover"><div class="kpi"><div class="kpi-label">进货总价</div><div class="kpi-value" style="color:#e6a23c">¥{{ fmt(purchaseAmount) }}</div></div></el-card></el-col>
     </el-row>
 
     <el-card class="mt16" shadow="hover">
-      <template #header>订单列表</template>
-      <el-table :data="orders" stripe v-loading="loading" max-height="calc(100vh - 320px)">
-        <el-table-column prop="platform" label="平台" width="70">
-          <template #default="{ row }">{{ row.platform === 'tmall' ? '天猫' : '京东' }}</template>
-        </el-table-column>
-        <el-table-column prop="orderNo" label="订单号" width="200" />
-        <el-table-column prop="productName" label="商品名称" show-overflow-tooltip />
+      <template #header>销售合同列表</template>
+      <el-table :data="contracts" stripe v-loading="loading" max-height="calc(100vh - 360px)">
+        <el-table-column prop="anfeiContractNo" label="安菲合同编号" width="140" show-overflow-tooltip />
+        <el-table-column prop="salesperson" label="销售员" width="90" />
+        <el-table-column prop="contractNo" label="合同编号" width="200" show-overflow-tooltip />
+        <el-table-column prop="customerName" label="客户名称" width="180" show-overflow-tooltip />
+        <el-table-column prop="productName" label="产品名称" show-overflow-tooltip />
         <el-table-column prop="quantity" label="数量" width="70" />
-        <el-table-column label="买家实付" width="110">
-          <template #default="{ row }">¥{{ fmt(row.actualPayment) }}</template>
+        <el-table-column label="单价" width="90">
+          <template #default="{ row }">¥{{ fmt(row.unitPrice) }}</template>
         </el-table-column>
-        <el-table-column label="到账状态" width="90">
-          <template #default="{ row }">
-            <el-tag :type="row.matchStatus === 'settled' ? 'success' : 'warning'" size="small">
-              {{ row.matchStatus === 'settled' ? '已到账' : '未到账' }}
-            </el-tag>
-          </template>
+        <el-table-column label="总金额" width="100">
+          <template #default="{ row }">¥{{ fmt(row.totalAmount) }}</template>
         </el-table-column>
-        <el-table-column label="打款时间" width="160">
-          <template #default="{ row }">
-            <span v-if="row.matchStatus === 'settled' && row.paymentTime">
-              {{ new Date(row.paymentTime).toLocaleString('zh-CN') }}
-            </span>
-            <span v-else>-</span>
-          </template>
+        <el-table-column label="实际金额" width="100">
+          <template #default="{ row }">¥{{ fmt(row.actualContractAmount) }}</template>
         </el-table-column>
-        <el-table-column label="物流单号" width="140" show-overflow-tooltip>
-          <template #default="{ row }">{{ row.logisticsNo || '-' }}</template>
-        </el-table-column>
-        <el-table-column label="订单状态" width="160" show-overflow-tooltip>
-          <template #default="{ row }">{{ row.orderStatus || '-' }}</template>
-        </el-table-column>
-        <el-table-column label="下单时间" width="160">
-          <template #default="{ row }">{{ row.orderTime ? new Date(row.orderTime).toLocaleString('zh-CN') : '-' }}</template>
+        <el-table-column label="日期" width="110">
+          <template #default="{ row }">{{ row.orderDate ? formatDate(row.orderDate) : '-' }}</template>
         </el-table-column>
         <el-table-column label="操作" width="120" fixed="right">
           <template #default="{ row }">
             <el-button type="primary" link size="small" @click="showDetail(row)">详情</el-button>
-            <el-button type="danger" link size="small" @click="deleteOrder(row)">删除</el-button>
+            <el-button type="danger" link size="small" @click="deleteContract(row)">删除</el-button>
           </template>
         </el-table-column>
       </el-table>
@@ -78,14 +77,67 @@
         <el-pagination
           v-model:current-page="page"
           v-model:page-size="pageSize"
-          :page-sizes="[10, 20, 50]"
+          :page-sizes="[10, 20, 50, 100]"
           :total="total"
           layout="total, sizes, prev, pager, next"
-          @current-change="loadOrders"
+          @current-change="loadContracts"
           @size-change="onSizeChange"
         />
       </div>
     </el-card>
+
+    <!-- 新增/编辑合同 -->
+    <el-dialog v-model="showAddDialog" title="新增销售合同" width="700px">
+      <el-form :model="form" label-width="110px">
+        <el-row :gutter="20">
+          <el-col :span="12"><el-form-item label="安菲合同编号"><el-input v-model="form.anfeiContractNo" /></el-form-item></el-col>
+          <el-col :span="12"><el-form-item label="合同编号"><el-input v-model="form.contractNo" required /></el-form-item></el-col>
+        </el-row>
+        <el-row :gutter="20">
+          <el-col :span="12"><el-form-item label="销售员"><el-input v-model="form.salesperson" /></el-form-item></el-col>
+          <el-col :span="12"><el-form-item label="下单渠道"><el-input v-model="form.orderChannel" /></el-form-item></el-col>
+        </el-row>
+        <el-row :gutter="20">
+          <el-col :span="12"><el-form-item label="客户名称"><el-input v-model="form.customerName" /></el-form-item></el-col>
+          <el-col :span="12"><el-form-item label="产品名称"><el-input v-model="form.productName" /></el-form-item></el-col>
+        </el-row>
+        <el-row :gutter="20">
+          <el-col :span="8"><el-form-item label="数量"><el-input-number v-model="form.quantity" :min="0" style="width:100%" /></el-form-item></el-col>
+          <el-col :span="8"><el-form-item label="单价"><el-input-number v-model="form.unitPrice" :min="0" :precision="2" style="width:100%" /></el-form-item></el-col>
+          <el-col :span="8"><el-form-item label="总金额"><el-input-number v-model="form.totalAmount" :min="0" :precision="2" style="width:100%" /></el-form-item></el-col>
+        </el-row>
+        <el-row :gutter="20">
+          <el-col :span="12"><el-form-item label="日期"><el-date-picker v-model="form.orderDate" type="date" style="width:100%" value-format="YYYY-MM-DD" /></el-form-item></el-col>
+          <el-col :span="12"><el-form-item label="合同总金额"><el-input-number v-model="form.contractTotalAmount" :min="0" :precision="2" style="width:100%" /></el-form-item></el-col>
+        </el-row>
+        <el-row :gutter="20">
+          <el-col :span="12"><el-form-item label="实际合同金额"><el-input-number v-model="form.actualContractAmount" :min="0" :precision="2" style="width:100%" /></el-form-item></el-col>
+          <el-col :span="12"><el-form-item label="反款或佣金"><el-input v-model="form.rebateOrCommission" /></el-form-item></el-col>
+        </el-row>
+        <el-row :gutter="20">
+          <el-col :span="12"><el-form-item label="结算方式"><el-input v-model="form.settlementMethod" /></el-form-item></el-col>
+          <el-col :span="12"><el-form-item label="是否开票">
+            <el-select v-model="form.isInvoiced" style="width:100%">
+              <el-option label="是" value="是" />
+              <el-option label="否" value="否" />
+            </el-select>
+          </el-form-item></el-col>
+        </el-row>
+        <el-row :gutter="20">
+          <el-col :span="8"><el-form-item label="进货单价"><el-input-number v-model="form.purchaseUnitPrice" :min="0" :precision="2" style="width:100%" /></el-form-item></el-col>
+          <el-col :span="8"><el-form-item label="进货总价"><el-input-number v-model="form.purchaseTotalPrice" :min="0" :precision="2" style="width:100%" /></el-form-item></el-col>
+          <el-col :span="8"><el-form-item label="质保金到期"><el-date-picker v-model="form.warrantyDueDate" type="date" style="width:100%" value-format="YYYY-MM-DD" /></el-form-item></el-col>
+        </el-row>
+        <el-row :gutter="20">
+          <el-col :span="12"><el-form-item label="开票日期"><el-date-picker v-model="form.invoiceDate" type="date" style="width:100%" value-format="YYYY-MM-DD" /></el-form-item></el-col>
+          <el-col :span="12"><el-form-item label="发票号"><el-input v-model="form.invoiceNo" /></el-form-item></el-col>
+        </el-row>
+      </el-form>
+      <template #footer>
+        <el-button @click="showAddDialog = false">取消</el-button>
+        <el-button type="primary" @click="saveContract">保存</el-button>
+      </template>
+    </el-dialog>
 
     <!-- 订单导入对话框 -->
     <el-dialog v-model="showOrderDialog" title="导入订单" width="600px">
@@ -106,34 +158,29 @@
       </el-upload>
     </el-dialog>
 
-    <!-- 订单详情弹框 -->
-    <el-dialog v-model="showDetailDialog" title="订单详情" width="900px">
+    <!-- 合同详情 -->
+    <el-dialog v-model="showDetailDialog" title="合同详情" width="900px">
       <el-descriptions :column="2" border label-class-name="detail-label" v-if="detailRow">
-        <el-descriptions-item label="订单号">{{ detailRow.orderNo }}</el-descriptions-item>
-        <el-descriptions-item label="商品名称">{{ detailRow.productName || '-' }}</el-descriptions-item>
+        <el-descriptions-item label="安菲合同编号">{{ detailRow.anfeiContractNo || '-' }}</el-descriptions-item>
+        <el-descriptions-item label="合同编号">{{ detailRow.contractNo }}</el-descriptions-item>
+        <el-descriptions-item label="销售员">{{ detailRow.salesperson || '-' }}</el-descriptions-item>
+        <el-descriptions-item label="下单渠道">{{ detailRow.orderChannel || '-' }}</el-descriptions-item>
+        <el-descriptions-item label="客户名称">{{ detailRow.customerName || '-' }}</el-descriptions-item>
+        <el-descriptions-item label="产品名称">{{ detailRow.productName || '-' }}</el-descriptions-item>
+        <el-descriptions-item label="数量">{{ detailRow.quantity || 0 }}</el-descriptions-item>
+        <el-descriptions-item label="单价">¥{{ fmt(detailRow.unitPrice) }}</el-descriptions-item>
         <el-descriptions-item label="总金额">¥{{ fmt(detailRow.totalAmount) }}</el-descriptions-item>
-        <el-descriptions-item label="买家实付">¥{{ fmt(detailRow.actualPayment) }}</el-descriptions-item>
-        <el-descriptions-item label="卖家服务费">¥{{ fmt(detailRow.sellerServiceFee || 0) }}</el-descriptions-item>
-        <el-descriptions-item label="到账状态">
-          <el-tag :type="detailRow.matchStatus === 'settled' ? 'success' : 'warning'" size="small">
-            {{ detailRow.matchStatus === 'settled' ? '已到账' : '未到账' }}
-          </el-tag>
-        </el-descriptions-item>
-        <el-descriptions-item label="打款时间">
-          <span v-if="detailRow.matchStatus === 'settled' && detailRow.paymentTime">
-            {{ new Date(detailRow.paymentTime).toLocaleString('zh-CN') }}
-          </span>
-          <span v-else>-</span>
-        </el-descriptions-item>
-        <el-descriptions-item label="订单状态">{{ detailRow.orderStatus || '-' }}</el-descriptions-item>
-        <el-descriptions-item label="店铺名称">{{ detailRow.shopName || '-' }}</el-descriptions-item>
-        <el-descriptions-item label="物流单号">{{ detailRow.logisticsNo || '-' }}</el-descriptions-item>
-        <el-descriptions-item label="物流公司">{{ detailRow.logisticsCompany || '-' }}</el-descriptions-item>
-        <el-descriptions-item label="支付方式">{{ detailRow.paymentMethod || '-' }}</el-descriptions-item>
-        <el-descriptions-item label="支付流水号">{{ detailRow.paymentFlowNo || '-' }}</el-descriptions-item>
-        <el-descriptions-item label="下单时间">{{ detailRow.orderTime ? new Date(detailRow.orderTime).toLocaleString('zh-CN') : '-' }}</el-descriptions-item>
-        <el-descriptions-item label="发货时间">{{ detailRow.shipTime ? new Date(detailRow.shipTime).toLocaleString('zh-CN') : '-' }}</el-descriptions-item>
-        <el-descriptions-item label="确认收货">{{ detailRow.confirmTime ? new Date(detailRow.confirmTime).toLocaleString('zh-CN') : '-' }}</el-descriptions-item>
+        <el-descriptions-item label="日期">{{ detailRow.orderDate ? formatDate(detailRow.orderDate) : '-' }}</el-descriptions-item>
+        <el-descriptions-item label="合同总金额">¥{{ fmt(detailRow.contractTotalAmount) }}</el-descriptions-item>
+        <el-descriptions-item label="反款或佣金">{{ detailRow.rebateOrCommission || '-' }}</el-descriptions-item>
+        <el-descriptions-item label="实际金额">¥{{ fmt(detailRow.actualContractAmount) }}</el-descriptions-item>
+        <el-descriptions-item label="结算方式">{{ detailRow.settlementMethod || '-' }}</el-descriptions-item>
+        <el-descriptions-item label="进货单价">¥{{ fmt(detailRow.purchaseUnitPrice) }}</el-descriptions-item>
+        <el-descriptions-item label="进货总价">¥{{ fmt(detailRow.purchaseTotalPrice) }}</el-descriptions-item>
+        <el-descriptions-item label="质保金到期">{{ detailRow.warrantyDueDate ? formatDate(detailRow.warrantyDueDate) : '-' }}</el-descriptions-item>
+        <el-descriptions-item label="是否开票">{{ detailRow.isInvoiced || '-' }}</el-descriptions-item>
+        <el-descriptions-item label="开票日期">{{ detailRow.invoiceDate ? formatDate(detailRow.invoiceDate) : '-' }}</el-descriptions-item>
+        <el-descriptions-item label="发票号">{{ detailRow.invoiceNo || '-' }}</el-descriptions-item>
       </el-descriptions>
     </el-dialog>
   </div>
@@ -141,93 +188,79 @@
 
 <script setup>
 import { ref, computed, onMounted } from 'vue'
-import { Upload, UploadFilled } from '@element-plus/icons-vue'
+import { Plus, Download, Upload, UploadFilled } from '@element-plus/icons-vue'
 import { ElMessage, ElMessageBox } from 'element-plus'
-import api from '../api'
-import { useMonths } from '../utils/composables'
-const { months } = useMonths()
+import { contractsApi, baseDataApi } from '../api'
+
+const dateRange = ref([])
+const salesperson = ref('')
+const platform = ref('all')
+const contractNo = ref('')
+const contracts = ref([])
+const total = ref(0)
+const page = ref(1)
+const pageSize = ref(20)
+const loading = ref(false)
+const showAddDialog = ref(false)
+const showOrderDialog = ref(false)
+const showDetailDialog = ref(false)
+const detailRow = ref(null)
+const salespeopleList = ref([])
+const platformsList = ref([])
 
 const uploadHeaders = computed(() => {
   const token = localStorage.getItem('token')
   return token ? { Authorization: `Bearer ${token}` } : {}
 })
 
-const month = ref('')
-const platform = ref('all')
-const matchStatus = ref('all')
-const orderNo = ref('')
-const orders = ref([])
-const total = ref(0)
-const page = ref(1)
-const pageSize = ref(10)
-const loading = ref(false)
-const stats = ref({ total: 0, settled: 0, pending: 0 })
-const showOrderDialog = ref(false)
-const showDetailDialog = ref(false)
-const detailRow = ref(null)
+const form = ref({
+  anfeiContractNo: '', salesperson: '', orderChannel: '', contractNo: '',
+  customerName: '', productName: '', quantity: 0, unitPrice: 0, totalAmount: 0,
+  orderDate: '', contractTotalAmount: 0, rebateOrCommission: '', actualContractAmount: 0,
+  settlementMethod: '', purchaseUnitPrice: 0, purchaseTotalPrice: 0,
+  warrantyDueDate: '', isInvoiced: '', invoiceDate: '', invoiceNo: ''
+})
 
 function fmt(v) { return (v || 0).toLocaleString('zh-CN', { minimumFractionDigits: 2 }) }
+function formatDate(d) { return d ? new Date(d).toLocaleDateString('zh-CN') : '-' }
 
-async function loadData() {
-  page.value = 1
-  await loadStats()
-  await loadOrders()
-}
+const totalAmount = computed(() => contracts.value.reduce((s, c) => s + (c.totalAmount || 0), 0))
+const actualAmount = computed(() => contracts.value.reduce((s, c) => s + (c.actualContractAmount || 0), 0))
+const purchaseAmount = computed(() => contracts.value.reduce((s, c) => s + (c.purchaseTotalPrice || 0), 0))
 
-async function loadStats() {
+async function loadBaseData() {
   try {
-    const params = {}
-    if (platform.value !== 'all') params.platform = platform.value
-    stats.value = (await api.get('/import/settlement-stats', { params })).data
+    salespeopleList.value = (await baseDataApi.getSalespeople()).data
+    platformsList.value = (await baseDataApi.getPlatforms()).data
   } catch (e) { console.error(e) }
 }
 
-async function loadOrders() {
+async function loadData() {
+  page.value = 1
+  await loadContracts()
+}
+
+async function loadContracts() {
   loading.value = true
   try {
     const params = { page: page.value, pageSize: pageSize.value }
+    if (dateRange.value && dateRange.value.length === 2) {
+      params.startDate = dateRange.value[0]
+      params.endDate = dateRange.value[1]
+    }
+    if (salesperson.value) params.salesperson = salesperson.value
     if (platform.value !== 'all') params.platform = platform.value
-    if (matchStatus.value !== 'all') params.status = matchStatus.value
-    if (orderNo.value) params.orderNo = orderNo.value
-    const res = (await api.get('/import/settlement-detail', { params })).data
-    orders.value = res.data || []
+    if (contractNo.value) params.contractNo = contractNo.value
+    const res = (await contractsApi.getList(params)).data
+    contracts.value = res.data || []
     total.value = res.total || 0
   } catch (e) { console.error(e) }
   loading.value = false
 }
 
-function onSizeChange() { page.value = 1; loadOrders() }
+function onSizeChange() { page.value = 1; loadContracts() }
 
 function beforeOrderUpload() { return true }
-
-function showDetail(row) { detailRow.value = row; showDetailDialog.value = true }
-
-async function deleteOrder(row) {
-  try {
-    await ElMessageBox.confirm(`确认删除订单 ${row.orderNo}？${row.matchStatus === 'settled' ? '删除后将同时移除对应的账单记录。' : ''}`, '删除确认', {
-      confirmButtonText: '删除',
-      cancelButtonText: '取消',
-      type: 'warning'
-    })
-  } catch (e) {
-    return // 用户取消
-  }
-
-  try {
-    const res = await api.delete(`/import/settlement/${row._id}`)
-    if (res.data.success) {
-      ElMessage.success('删除成功')
-      page.value = 1
-      await loadOrders()
-      await loadStats()
-    } else {
-      ElMessage.error(res.data.error || '删除失败')
-    }
-  } catch (e) {
-    const msg = e.response?.data?.error || e.message || '删除失败'
-    ElMessage.error(msg)
-  }
-}
 
 function onOrderSuccess(res) {
   if (res.success) {
@@ -243,7 +276,60 @@ function onUploadError() {
   ElMessage.error('上传失败，请检查网络连接')
 }
 
-onMounted(loadData)
+async function saveContract() {
+  try {
+    await contractsApi.add(form.value)
+    ElMessage.success('添加成功')
+    showAddDialog.value = false
+    form.value = {
+      anfeiContractNo: '', salesperson: '', orderChannel: '', contractNo: '',
+      customerName: '', productName: '', quantity: 0, unitPrice: 0, totalAmount: 0,
+      orderDate: '', contractTotalAmount: 0, rebateOrCommission: '', actualContractAmount: 0,
+      settlementMethod: '', purchaseUnitPrice: 0, purchaseTotalPrice: 0,
+      warrantyDueDate: '', isInvoiced: '', invoiceDate: '', invoiceNo: ''
+    }
+    loadData()
+  } catch (e) {
+    ElMessage.error(e.response?.data?.error || '操作失败')
+  }
+}
+
+async function deleteContract(row) {
+  try {
+    await ElMessageBox.confirm(`确认删除合同 ${row.contractNo}？`, '删除确认', { type: 'warning' })
+  } catch (e) { return }
+  try {
+    await contractsApi.delete(row._id)
+    ElMessage.success('删除成功')
+    page.value = 1
+    loadData()
+  } catch (e) {
+    ElMessage.error(e.response?.data?.error || '删除失败')
+  }
+}
+
+function showDetail(row) { detailRow.value = row; showDetailDialog.value = true }
+
+async function handleExport() {
+  if (!dateRange.value || dateRange.value.length !== 2) {
+    ElMessage.warning('请先选择日期范围')
+    return
+  }
+  try {
+    const res = await contractsApi.exportExcel({ startDate: dateRange.value[0], endDate: dateRange.value[1] })
+    const url = window.URL.createObjectURL(new Blob([res.data]))
+    const link = document.createElement('a')
+    link.href = url
+    link.download = `销售合同_${dateRange.value[0]}_${dateRange.value[1]}.xlsx`
+    link.click()
+    window.URL.revokeObjectURL(url)
+    ElMessage.success('导出成功')
+  } catch (e) {
+    ElMessage.error(e.response?.data?.error || '导出失败')
+  }
+}
+
+onMounted(() => { loadBaseData(); loadData() })
 </script>
 
 <style scoped>

@@ -50,3 +50,36 @@ export const expenseApi = {
   getSummary(params) { return api.get('/expense/summary', { params }) },
   getDetail(params) { return api.get('/expense/detail', { params }) }
 }
+
+// 销售合同 API
+export const contractsApi = {
+  getList(params) { return api.get('/contracts/list', { params }) },
+  add(data) { return api.post('/contracts', data) },
+  update(id, data) { return api.put(`/contracts/${id}`, data) },
+  delete(id) { return api.delete(`/contracts/${id}`) },
+  exportExcel(params) { return api.get('/contracts/export', { params, responseType: 'blob' }) }
+}
+
+// 基础资料 API
+export const baseDataApi = {
+  // 商品
+  getProducts() { return api.get('/base/products') },
+  addProduct(data) { return api.post('/base/products', data) },
+  updateProduct(id, data) { return api.put(`/base/products/${id}`, data) },
+  deleteProduct(id) { return api.delete(`/base/products/${id}`) },
+  // 平台
+  getPlatforms() { return api.get('/base/platforms') },
+  addPlatform(data) { return api.post('/base/platforms', data) },
+  updatePlatform(id, data) { return api.put(`/base/platforms/${id}`, data) },
+  deletePlatform(id) { return api.delete(`/base/platforms/${id}`) },
+  // 仓库
+  getWarehouses() { return api.get('/base/warehouses') },
+  addWarehouse(data) { return api.post('/base/warehouses', data) },
+  updateWarehouse(id, data) { return api.put(`/base/warehouses/${id}`, data) },
+  deleteWarehouse(id) { return api.delete(`/base/warehouses/${id}`) },
+  // 销售员
+  getSalespeople() { return api.get('/base/salespeople') },
+  addSalesperson(data) { return api.post('/base/salespeople', data) },
+  updateSalesperson(id, data) { return api.put(`/base/salespeople/${id}`, data) },
+  deleteSalesperson(id) { return api.delete(`/base/salespeople/${id}`) }
+}

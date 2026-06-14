@@ -16,7 +16,13 @@
       "Bash(curl -s http://localhost:5173/)",
       "Bash(node -e \"require\\('./server/utils/csvParser'\\); require\\('./server/routes/import'\\); require\\('./server/routes/refund'\\); require\\('./server/routes/expense'\\); console.log\\('All server modules load OK'\\)\")",
       "Bash(taskkill //F //IM node.exe)",
-      "Bash(npm run *)"
+      "Bash(npm run *)",
+      "Bash(python3 -c \"import pandas; print\\('pandas ok'\\)\")",
+      "Bash(python3 -c \"import xlrd; print\\('xlrd ok'\\)\")",
+      "Bash(pip install *)",
+      "Bash(cat)",
+      "Bash(python3 /tmp/read_excel.py)",
+      "Bash(python -c \"import openpyxl; print\\('openpyxl ok'\\)\")"
     ]
   }
 }

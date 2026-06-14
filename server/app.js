@@ -26,6 +26,7 @@ app.use('/api/cost', authMiddleware, require('./routes/cost'));
 app.use('/api/refund', authMiddleware, require('./routes/refund'));
 app.use('/api/payment', authMiddleware, require('./routes/payment'));
 app.use('/api/expense', authMiddleware, require('./routes/expense'));
+app.use('/api/contracts', authMiddleware, require('./routes/contracts'));
 app.use('/api/base', authMiddleware, require('./routes/baseData'));
 
 app.use('/uploads', express.static(path.join(__dirname, '..', config.UPLOAD_DIR.replace('./server/', ''))));
