@@ -9,38 +9,41 @@
         <h2>运营分析平台</h2>
       </div>
       <el-menu :default-active="activeMenu" router class="nav-menu">
-        <el-menu-item index="/sales">
-          <el-icon><TrendCharts /></el-icon>
-          <span>订单列表</span>
-        </el-menu-item>
-        <el-menu-item index="/billing">
-          <el-icon><DocumentChecked /></el-icon>
-          <span>账单列表</span>
-        </el-menu-item>
-        <el-menu-item index="/cost">
-          <el-icon><Coin /></el-icon>
-          <span>成本核算</span>
-        </el-menu-item>
-        <el-menu-item index="/refund">
-          <el-icon><RefreshLeft /></el-icon>
-          <span>售后退款</span>
-        </el-menu-item>
-        <el-menu-item index="/payment">
-          <el-icon><Wallet /></el-icon>
-          <span>回款管理</span>
-        </el-menu-item>
-        <el-menu-item index="/expense">
-          <el-icon><Document /></el-icon>
-          <span>费用分析</span>
-        </el-menu-item>
-        <el-menu-item index="/system" v-if="isAdmin">
-          <el-icon><List /></el-icon>
-          <span>操作日志</span>
-        </el-menu-item>
-        <el-menu-item index="/users" v-if="isAdmin">
-          <el-icon><User /></el-icon>
-          <span>用户管理</span>
-        </el-menu-item>
+
+        <!-- 运营中心 -->
+        <el-sub-menu index="operations">
+          <template #title><el-icon><Shop /></el-icon><span>运营中心</span></template>
+          <el-menu-item index="/sales">订单列表</el-menu-item>
+          <el-menu-item index="/refund">售后退款</el-menu-item>
+          <el-menu-item index="/customers">客户管理</el-menu-item>
+        </el-sub-menu>
+
+        <!-- 财务管理 -->
+        <el-sub-menu index="finance">
+          <template #title><el-icon><Money /></el-icon><span>财务管理</span></template>
+          <el-menu-item index="/billing">账单列表</el-menu-item>
+          <el-menu-item index="/payment">回款管理</el-menu-item>
+          <el-menu-item index="/cost">成本核算</el-menu-item>
+          <el-menu-item index="/expense">费用分析</el-menu-item>
+        </el-sub-menu>
+
+        <!-- 基础资料 -->
+        <el-sub-menu index="base">
+          <template #title><el-icon><Files /></el-icon><span>基础资料</span></template>
+          <el-menu-item index="/products">商品列表</el-menu-item>
+          <el-menu-item index="/platforms">平台列表</el-menu-item>
+          <el-menu-item index="/warehouses">仓库列表</el-menu-item>
+          <el-menu-item index="/salespeople">销售员列表</el-menu-item>
+        </el-sub-menu>
+
+        <!-- 系统管理 -->
+        <el-sub-menu index="system" v-if="isAdmin">
+          <template #title><el-icon><Setting /></el-icon><span>系统管理</span></template>
+          <el-menu-item index="/users">用户管理</el-menu-item>
+          <el-menu-item index="/roles">角色权限</el-menu-item>
+          <el-menu-item index="/system">操作日志</el-menu-item>
+        </el-sub-menu>
+
       </el-menu>
     </el-aside>
     <el-container>
@@ -88,7 +91,7 @@
 import { ref, computed } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { ElMessage } from 'element-plus'
-import { TrendCharts, DocumentChecked, Coin, RefreshLeft, Wallet, Document, List, User, ArrowDown } from '@element-plus/icons-vue'
+import { Shop, Money, Files, Setting, ArrowDown } from '@element-plus/icons-vue'
 import api from './api'
 
 const route = useRoute()
@@ -111,7 +114,13 @@ const titleMap = {
   '/refund': '售后退款',
   '/payment': '回款管理',
   '/expense': '费用分析',
+  '/customers': '客户管理',
+  '/products': '商品列表',
+  '/platforms': '平台列表',
+  '/warehouses': '仓库列表',
+  '/salespeople': '销售员列表',
   '/users': '用户管理',
+  '/roles': '角色权限',
   '/system': '操作日志'
 }
 const pageTitle = computed(() => titleMap[route.path] || '运营分析平台')
@@ -156,10 +165,63 @@ html, body, #app { height: 100%; overflow: hidden; font-family: -apple-system, B
 .sidebar { background: #1d1e2c; overflow-y: auto; }
 .logo { padding: 20px; text-align: center; border-bottom: 1px solid #2d2e3c; }
 .logo h2 { color: #fff; font-size: 18px; font-weight: 600; }
+
+.nav-menu { border-right: none; background: #1d1e2c !important; }
+
+/* 子菜单标题 */
+.nav-menu :deep(.el-sub-menu__title) {
+  color: #6464c9 !important;
+  font-size: 14px;
+  height: 44px;
+  line-height: 44px;
+  padding-left: 16px !important;
+}
+.nav-menu :deep(.el-sub-menu__title:hover) {
+  background: rgba(255, 255, 255, 0.05) !important;
+  color: #6464c9 !important;
+}
+/* 覆盖 Element Plus 默认样式 */
 .nav-menu { border-right: none; background: #1d1e2c; }
-.nav-menu .el-menu-item { color: #a0a0b0; }
-.nav-menu .el-menu-item:hover, .nav-menu .el-menu-item.is-active { background: #2d2e3c; color: #409eff; }
+.nav-menu .el-menu { background: transparent; }
+.nav-menu .el-menu-item { background: transparent; color: #a0a0b0; }
+.nav-menu .el-sub-menu__title { background: transparent; color: #c0c0d0; }
+.nav-menu .el-sub-menu .el-menu { background: #252637; }
+.nav-menu .el-sub-menu .el-menu .el-menu-item { background: #252637; color: #a0a0b8; }
+
+/* hover */
+.nav-menu .el-menu-item:hover,
+.nav-menu .el-sub-menu__title:hover { background: rgba(255,255,255,.05); color: #fff; }
+.nav-menu .el-sub-menu .el-menu .el-menu-item:hover { background: #2d2e40; color: #fff; }
+
+/* active — 用更具体的选择器确保覆盖子菜单项 */
+.nav-menu .el-menu-item.is-active { background: rgba(255,255,255,.05); color: #fff; }
+.nav-menu .el-sub-menu .el-menu .el-menu-item.is-active { background: rgba(255,255,255,.05); color: #fff; }
+
+/* 子菜单内容容器 */
+.nav-menu :deep(.el-sub-menu .el-menu) {
+  background: #252637 !important;
+}
+
+/* 子菜单内容项 — 用 !important 覆盖 Element Plus 默认白色背景 */
+.nav-menu :deep(.el-sub-menu .el-menu .el-menu-item) {
+  background: #252637 !important;
+  color: #a0a0b8 !important;
+  height: 40px !important;
+  line-height: 40px !important;
+  padding-left: 40px !important;
+  font-size: 13px;
+}
+.nav-menu :deep(.el-sub-menu .el-menu .el-menu-item:hover) {
+  background: #2d2e40 !important;
+  color: #6464c9 !important;
+}
+.nav-menu :deep(.el-sub-menu .el-menu .el-menu-item.is-active) {
+  background: #409eff !important;
+  color: #6464c9 !important;
+}
+
 .nav-menu .el-icon { margin-right: 8px; }
+
 .page-header {
   background: #fff;
   border-bottom: 1px solid #e4e7ed;

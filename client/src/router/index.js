@@ -3,13 +3,23 @@ import { createRouter, createWebHistory } from 'vue-router'
 const routes = [
   { path: '/login', component: () => import('../views/Login.vue') },
   { path: '/', redirect: '/sales' },
+  // 运营中心
   { path: '/sales', component: () => import('../views/Sales.vue'), meta: { auth: true } },
-  { path: '/billing', component: () => import('../views/Billing.vue'), meta: { auth: true } },
-  { path: '/cost', component: () => import('../views/Cost.vue'), meta: { auth: true } },
   { path: '/refund', component: () => import('../views/Refund.vue'), meta: { auth: true } },
+  { path: '/customers', component: () => import('../views/Customers.vue'), meta: { auth: true } },
+  // 财务管理
+  { path: '/billing', component: () => import('../views/Billing.vue'), meta: { auth: true } },
   { path: '/payment', component: () => import('../views/Payment.vue'), meta: { auth: true } },
+  { path: '/cost', component: () => import('../views/Cost.vue'), meta: { auth: true } },
   { path: '/expense', component: () => import('../views/Expense.vue'), meta: { auth: true } },
+  // 基础资料
+  { path: '/products', component: () => import('../views/Products.vue'), meta: { auth: true } },
+  { path: '/platforms', component: () => import('../views/Platforms.vue'), meta: { auth: true } },
+  { path: '/warehouses', component: () => import('../views/Warehouses.vue'), meta: { auth: true } },
+  { path: '/salespeople', component: () => import('../views/Salespeople.vue'), meta: { auth: true } },
+  // 系统管理
   { path: '/users', component: () => import('../views/UserManagement.vue'), meta: { auth: true, role: 'admin' } },
+  { path: '/roles', component: () => import('../views/Roles.vue'), meta: { auth: true, role: 'admin' } },
   { path: '/system', component: () => import('../views/SystemLog.vue'), meta: { auth: true, role: 'admin' } }
 ]
 
