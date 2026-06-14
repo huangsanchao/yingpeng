@@ -82,6 +82,7 @@ router.get('/export', async (req, res) => {
     };
 
     const contracts = await SalesContract.find(filter).sort({ orderDate: 1 });
+    console.log(`[export] 找到 ${contracts.length} 条合同`);
 
     const workbook = new ExcelJS.Workbook();
     const worksheet = workbook.addWorksheet('销售合同');
@@ -113,16 +114,16 @@ router.get('/export', async (req, res) => {
         c.quantity || 0,
         c.unitPrice || 0,
         c.totalAmount || 0,
-        c.orderDate ? formatDate(c.orderDate) : '',
+        formatDate(c.orderDate),
         c.contractTotalAmount || 0,
         c.rebateOrCommission || '',
         c.actualContractAmount || 0,
         c.settlementMethod || '',
         c.purchaseUnitPrice || 0,
         c.purchaseTotalPrice || 0,
-        c.warrantyDueDate ? formatDate(c.warrantyDueDate) : '',
+        formatDate(c.warrantyDueDate),
         c.isInvoiced || '',
-        c.invoiceDate ? formatDate(c.invoiceDate) : '',
+        formatDate(c.invoiceDate),
         c.invoiceNo || ''
       ]);
     });
@@ -137,20 +138,29 @@ router.get('/export', async (req, res) => {
 
     // 返回 Excel
     const buffer = await workbook.xlsx.writeBuffer();
+    console.log(`[export] Excel生成成功, ${buffer.length} bytes`);
+    const filename = `sales_contract_${startDate}_${endDate}.xlsx`;
     res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
-    res.setHeader('Content-Disposition', `attachment; filename=销售合同_${startDate}_${endDate}.xlsx`);
+    res.setHeader('Content-Disposition', `attachment; filename="${filename}"`);
     res.send(buffer);
   } catch (err) {
+    console.error('[export] 错误:', err.message, err.stack);
     res.status(500).json({ error: err.message });
   }
 });
 
 function formatDate(date) {
-  const d = new Date(date);
-  const y = d.getFullYear();
-  const m = String(d.getMonth() + 1).padStart(2, '0');
-  const day = String(d.getDate()).padStart(2, '0');
-  return `${y}-${m}-${day}`;
+  if (!date) return '';
+  try {
+    const d = new Date(date);
+    if (isNaN(d.getTime())) return '';
+    const y = d.getFullYear();
+    const m = String(d.getMonth() + 1).padStart(2, '0');
+    const day = String(d.getDate()).padStart(2, '0');
+    return `${y}-${m}-${day}`;
+  } catch (e) {
+    return '';
+  }
 }
 
 module.exports = router;

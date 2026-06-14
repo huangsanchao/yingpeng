@@ -87,19 +87,31 @@
     </el-card>
 
     <!-- 新增/编辑合同 -->
-    <el-dialog v-model="showAddDialog" title="新增销售合同" width="700px">
+    <el-dialog v-model="showAddDialog" title="新增销售合同" width="900px">
       <el-form :model="form" label-width="110px">
         <el-row :gutter="20">
           <el-col :span="12"><el-form-item label="安菲合同编号"><el-input v-model="form.anfeiContractNo" /></el-form-item></el-col>
           <el-col :span="12"><el-form-item label="合同编号"><el-input v-model="form.contractNo" required /></el-form-item></el-col>
         </el-row>
         <el-row :gutter="20">
-          <el-col :span="12"><el-form-item label="销售员"><el-input v-model="form.salesperson" /></el-form-item></el-col>
-          <el-col :span="12"><el-form-item label="下单渠道"><el-input v-model="form.orderChannel" /></el-form-item></el-col>
+          <el-col :span="12"><el-form-item label="销售员">
+            <el-select v-model="form.salesperson" filterable clearable placeholder="选择销售员" style="width:100%">
+              <el-option v-for="s in salespeopleList" :key="s.name" :label="s.name" :value="s.name" />
+            </el-select>
+          </el-form-item></el-col>
+          <el-col :span="12"><el-form-item label="下单渠道">
+            <el-select v-model="form.orderChannel" filterable clearable placeholder="选择平台" style="width:100%">
+              <el-option v-for="p in platformsList" :key="p.name" :label="p.name" :value="p.name" />
+            </el-select>
+          </el-form-item></el-col>
         </el-row>
         <el-row :gutter="20">
-          <el-col :span="12"><el-form-item label="客户名称"><el-input v-model="form.customerName" /></el-form-item></el-col>
-          <el-col :span="12"><el-form-item label="产品名称"><el-input v-model="form.productName" /></el-form-item></el-col>
+          <el-col :span="12"><el-form-item label="客户名称"><el-input v-model="form.customerName" placeholder="客户名称" /></el-form-item></el-col>
+          <el-col :span="12"><el-form-item label="产品名称">
+            <el-select v-model="form.productName" filterable clearable placeholder="选择产品" style="width:100%">
+              <el-option v-for="p in productsList" :key="p.productName" :label="p.productName" :value="p.productName" />
+            </el-select>
+          </el-form-item></el-col>
         </el-row>
         <el-row :gutter="20">
           <el-col :span="8"><el-form-item label="数量"><el-input-number v-model="form.quantity" :min="0" style="width:100%" /></el-form-item></el-col>
@@ -207,6 +219,7 @@ const showDetailDialog = ref(false)
 const detailRow = ref(null)
 const salespeopleList = ref([])
 const platformsList = ref([])
+const productsList = ref([])
 
 const uploadHeaders = computed(() => {
   const token = localStorage.getItem('token')
@@ -232,6 +245,7 @@ async function loadBaseData() {
   try {
     salespeopleList.value = (await baseDataApi.getSalespeople()).data
     platformsList.value = (await baseDataApi.getPlatforms()).data
+    productsList.value = (await baseDataApi.getProducts()).data
   } catch (e) { console.error(e) }
 }
 

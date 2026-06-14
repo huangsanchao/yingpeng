@@ -6,7 +6,7 @@
     </div>
 
     <el-card shadow="hover">
-      <el-table :data="products" stripe v-loading="loading">
+      <el-table :data="paginatedProducts" stripe v-loading="loading">
         <el-table-column prop="productName" label="商品名称" show-overflow-tooltip />
         <el-table-column prop="sku" label="SKU" width="200" show-overflow-tooltip />
         <el-table-column prop="productId" label="商品ID" width="150" />
@@ -21,6 +21,15 @@
           </template>
         </el-table-column>
       </el-table>
+      <div class="pagination">
+        <el-pagination
+          v-model:current-page="page"
+          v-model:page-size="pageSize"
+          :page-sizes="[10, 20, 50, 100]"
+          :total="products.length"
+          layout="total, sizes, prev, pager, next"
+        />
+      </div>
     </el-card>
 
     <!-- 新增/编辑 -->
@@ -41,16 +50,23 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, computed, onMounted } from 'vue'
 import { ElMessage, ElMessageBox } from 'element-plus'
 import { baseDataApi } from '../api'
 
 const products = ref([])
 const loading = ref(false)
+const page = ref(1)
+const pageSize = ref(20)
 const showAddDialog = ref(false)
 const editMode = ref('add')
 const editingId = ref(null)
 const form = ref({ productName: '', sku: '', productId: '', costPrice: 0, category: '' })
+
+const paginatedProducts = computed(() => {
+  const start = (page.value - 1) * pageSize.value
+  return products.value.slice(start, start + pageSize.value)
+})
 
 async function loadData() {
   loading.value = true
@@ -105,4 +121,5 @@ onMounted(loadData)
 <style scoped>
 .toolbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
 .toolbar h3 { font-size: 16px; font-weight: 600; color: #303133; }
+.pagination { margin-top: 12px; display: flex; justify-content: flex-end; }
 </style>
