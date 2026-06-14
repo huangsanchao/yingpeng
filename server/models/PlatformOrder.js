@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const platformOrderSchema = new mongoose.Schema({
   platform: { type: String, required: true, enum: ['tmall', 'jd'] },
-  orderNo: { type: String, index: true },
+  orderNo: { type: String, index: true, unique: true },
   subOrderNo: { type: String },
   merchantOrderNo: { type: String },
   productId: { type: String },
@@ -24,5 +24,7 @@ const platformOrderSchema = new mongoose.Schema({
   subCategory: { type: String },
   createdAt: { type: Date, default: Date.now }
 });
+
+platformOrderSchema.index({ platform: 1, orderNo: 1 }, { unique: true });
 
 module.exports = mongoose.model('PlatformOrder', platformOrderSchema);

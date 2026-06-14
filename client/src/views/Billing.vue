@@ -43,9 +43,10 @@
         <el-table-column label="打款时间" width="160">
           <template #default="{ row }">{{ row.paymentTime ? new Date(row.paymentTime).toLocaleString('zh-CN') : '-' }}</template>
         </el-table-column>
-        <el-table-column label="操作" width="80" fixed="right">
+        <el-table-column label="操作" width="120" fixed="right">
           <template #default="{ row }">
             <el-button type="primary" link size="small" @click="showDetail(row)">详情</el-button>
+            <el-button type="danger" link size="small" @click="deleteBilling(row)">删除</el-button>
           </template>
         </el-table-column>
       </el-table>
@@ -113,7 +114,7 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue'
 import { Upload, UploadFilled } from '@element-plus/icons-vue'
-import { ElMessage } from 'element-plus'
+import { ElMessage, ElMessageBox } from 'element-plus'
 import api from '../api'
 import { useMonths } from '../utils/composables'
 const { months } = useMonths()
@@ -187,6 +188,32 @@ function onUploadError() {
 }
 
 function showDetail(row) { detailRow.value = row; showDetailDialog.value = true }
+
+async function deleteBilling(row) {
+  try {
+    await ElMessageBox.confirm(`确认删除账单 ${row.orderNo}？`, '删除确认', {
+      confirmButtonText: '删除',
+      cancelButtonText: '取消',
+      type: 'warning'
+    })
+  } catch (e) {
+    return // 用户取消
+  }
+
+  try {
+    const res = await api.delete(`/billing/${row._id}`)
+    if (res.data.success) {
+      ElMessage.success('删除成功')
+      page.value = 1
+      await loadBillings()
+    } else {
+      ElMessage.error(res.data.error || '删除失败')
+    }
+  } catch (e) {
+    const msg = e.response?.data?.error || e.message || '删除失败'
+    ElMessage.error(msg)
+  }
+}
 
 onMounted(loadData)
 </script>

@@ -169,16 +169,20 @@ router.get('/settlement-detail', async (req, res) => {
 
     const allOrders = await SettlementRecord.find(filter).sort({ orderTime: -1 });
 
-    // Get billing orderNos for matching
-    const billingNos = new Set(
-      (await PlatformOrder.find({ platform: 'tmall' }).distinct('orderNo')).map(normalizeOrderNo)
-    );
+    // Get billing orders with paymentTime for matching
+    const billingMap = {};
+    const billingOrders = await PlatformOrder.find({ platform: 'tmall' }).select('orderNo paymentTime');
+    for (const b of billingOrders) {
+      billingMap[normalizeOrderNo(b.orderNo)] = b.paymentTime;
+    }
 
-    // Compute matchStatus dynamically
+    // Compute matchStatus and paymentTime dynamically
     const rows = allOrders.map(r => {
       const doc = r.toObject();
-      const isSettled = billingNos.has(normalizeOrderNo(r.orderNo));
+      const norm = normalizeOrderNo(r.orderNo);
+      const isSettled = billingMap[norm] !== undefined;
       doc.matchStatus = isSettled ? 'settled' : 'pending';
+      doc.paymentTime = isSettled ? billingMap[norm] : null;
       return doc;
     });
 
@@ -201,6 +205,28 @@ router.get('/settlement-detail', async (req, res) => {
     const paged = filtered.slice(start, start + parseInt(pageSize));
 
     res.json({ total, page: parseInt(page), pageSize: parseInt(pageSize), data: paged });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// Delete a settled order (remove from both SettlementRecord and PlatformOrder)
+router.delete('/settlement/:id', logMiddleware('import', 'delete', (req, res) => `删除已到账订单: ${req.params.id}`), async (req, res) => {
+  try {
+    const { id } = req.params;
+    const SettlementRecord = require('../models/SettlementRecord');
+    const PlatformOrder = require('../models/PlatformOrder');
+
+    const record = await SettlementRecord.findById(id);
+    if (!record) return res.status(404).json({ error: '订单不存在' });
+
+    // Remove matching PlatformOrder
+    await PlatformOrder.deleteMany({ orderNo: record.orderNo });
+
+    // Remove the SettlementRecord
+    await SettlementRecord.findByIdAndDelete(id);
+
+    res.json({ success: true });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }

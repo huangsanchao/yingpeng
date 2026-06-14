@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const PlatformOrder = require('../models/PlatformOrder');
+const { logMiddleware } = require('../middleware/logger');
 
 router.get('/list', async (req, res) => {
   try {
@@ -22,6 +23,17 @@ router.get('/list', async (req, res) => {
       .limit(parseInt(pageSize));
 
     res.json({ total, page: parseInt(page), pageSize: parseInt(pageSize), data: billings });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+router.delete('/:id', logMiddleware('billing', 'delete', (req, res) => `删除账单: ${req.params.id}`), async (req, res) => {
+  try {
+    const record = await PlatformOrder.findById(req.params.id);
+    if (!record) return res.status(404).json({ error: '账单不存在' });
+    await PlatformOrder.findByIdAndDelete(req.params.id);
+    res.json({ success: true });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }

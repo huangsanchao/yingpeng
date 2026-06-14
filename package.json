@@ -4,7 +4,9 @@
   "description": "防爆空调电商运营分析平台",
   "scripts": {
     "dev": "nodemon server/app.js",
-    "start": "node server/app.js"
+    "start": "node server/app.js",
+    "clear-data": "node server/scripts/clearData.js",
+    "create-test-user": "node server/scripts/createTestUser.js"
   },
   "dependencies": {
     "bcryptjs": "^3.0.3",

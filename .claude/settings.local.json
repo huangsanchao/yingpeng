@@ -15,7 +15,8 @@
       "Bash(curl -s -X DELETE http://localhost:3000/api/import/settlement-all)",
       "Bash(curl -s http://localhost:5173/)",
       "Bash(node -e \"require\\('./server/utils/csvParser'\\); require\\('./server/routes/import'\\); require\\('./server/routes/refund'\\); require\\('./server/routes/expense'\\); console.log\\('All server modules load OK'\\)\")",
-      "Bash(taskkill //F //IM node.exe)"
+      "Bash(taskkill //F //IM node.exe)",
+      "Bash(npm run *)"
     ]
   }
 }

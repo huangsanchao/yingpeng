@@ -188,15 +188,13 @@ async function importTmallFile(filePath, uploadedBy) {
     platform: 'tmall'
   }));
   if (docs.length) {
-    await PlatformOrder.insertMany(docs, { ordered: false }).catch(() => {
-      for (const doc of docs) {
-        PlatformOrder.findOneAndUpdate(
-          { platform: 'tmall', orderNo: doc.orderNo, monthPeriod: doc.monthPeriod },
-          doc,
-          { upsert: true }
-        ).exec();
-      }
-    });
+    for (const doc of docs) {
+      await PlatformOrder.findOneAndUpdate(
+        { platform: 'tmall', orderNo: doc.orderNo },
+        doc,
+        { upsert: true }
+      );
+    }
   }
   await ImportRecord.create({
     fileName: path.basename(filePath),

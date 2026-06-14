@@ -42,6 +42,14 @@
             </el-tag>
           </template>
         </el-table-column>
+        <el-table-column label="打款时间" width="160">
+          <template #default="{ row }">
+            <span v-if="row.matchStatus === 'settled' && row.paymentTime">
+              {{ new Date(row.paymentTime).toLocaleString('zh-CN') }}
+            </span>
+            <span v-else>-</span>
+          </template>
+        </el-table-column>
         <el-table-column label="物流单号" width="140" show-overflow-tooltip>
           <template #default="{ row }">{{ row.logisticsNo || '-' }}</template>
         </el-table-column>
@@ -51,9 +59,10 @@
         <el-table-column label="下单时间" width="160">
           <template #default="{ row }">{{ row.orderTime ? new Date(row.orderTime).toLocaleString('zh-CN') : '-' }}</template>
         </el-table-column>
-        <el-table-column label="操作" width="80" fixed="right">
+        <el-table-column label="操作" width="120" fixed="right">
           <template #default="{ row }">
             <el-button type="primary" link size="small" @click="showDetail(row)">详情</el-button>
+            <el-button type="danger" link size="small" @click="deleteOrder(row)">删除</el-button>
           </template>
         </el-table-column>
       </el-table>
@@ -102,6 +111,12 @@
             {{ detailRow.matchStatus === 'settled' ? '已到账' : '未到账' }}
           </el-tag>
         </el-descriptions-item>
+        <el-descriptions-item label="打款时间">
+          <span v-if="detailRow.matchStatus === 'settled' && detailRow.paymentTime">
+            {{ new Date(detailRow.paymentTime).toLocaleString('zh-CN') }}
+          </span>
+          <span v-else>-</span>
+        </el-descriptions-item>
         <el-descriptions-item label="订单状态">{{ detailRow.orderStatus || '-' }}</el-descriptions-item>
         <el-descriptions-item label="店铺名称">{{ detailRow.shopName || '-' }}</el-descriptions-item>
         <el-descriptions-item label="物流单号">{{ detailRow.logisticsNo || '-' }}</el-descriptions-item>
@@ -119,7 +134,7 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue'
 import { Upload, UploadFilled } from '@element-plus/icons-vue'
-import { ElMessage } from 'element-plus'
+import { ElMessage, ElMessageBox } from 'element-plus'
 import api from '../api'
 import { useMonths } from '../utils/composables'
 const { months } = useMonths()
@@ -174,6 +189,33 @@ function onSizeChange() { page.value = 1; loadOrders() }
 function beforeOrderUpload() { return true }
 
 function showDetail(row) { detailRow.value = row; showDetailDialog.value = true }
+
+async function deleteOrder(row) {
+  try {
+    await ElMessageBox.confirm(`确认删除订单 ${row.orderNo}？${row.matchStatus === 'settled' ? '删除后将同时移除对应的账单记录。' : ''}`, '删除确认', {
+      confirmButtonText: '删除',
+      cancelButtonText: '取消',
+      type: 'warning'
+    })
+  } catch (e) {
+    return // 用户取消
+  }
+
+  try {
+    const res = await api.delete(`/import/settlement/${row._id}`)
+    if (res.data.success) {
+      ElMessage.success('删除成功')
+      page.value = 1
+      await loadOrders()
+      await loadStats()
+    } else {
+      ElMessage.error(res.data.error || '删除失败')
+    }
+  } catch (e) {
+    const msg = e.response?.data?.error || e.message || '删除失败'
+    ElMessage.error(msg)
+  }
+}
 
 function onOrderSuccess(res) {
   if (res.success) {
