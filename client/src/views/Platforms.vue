@@ -62,7 +62,7 @@ const form = ref({ name: '', code: '', description: '', status: 'active' })
 async function loadData() {
   loading.value = true
   try {
-    platforms.value = (await baseDataApi.getPlatforms()).data
+    platforms.value = (await baseDataApi.getPlatforms()).data || []
   } catch (e) { console.error(e) }
   loading.value = false
 }

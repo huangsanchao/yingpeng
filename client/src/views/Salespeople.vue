@@ -63,7 +63,7 @@ const form = ref({ name: '', phone: '', status: 'active' })
 async function loadData() {
   loading.value = true
   try {
-    salespeople.value = (await baseDataApi.getSalespeople()).data
+    salespeople.value = (await baseDataApi.getSalespeople()).data || []
   } catch (e) { console.error(e) }
   loading.value = false
 }

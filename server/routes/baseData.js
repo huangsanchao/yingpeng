@@ -70,7 +70,7 @@ router.delete('/product-cost/:id', async (req, res) => {
 router.get('/products', async (req, res) => {
   try {
     const products = await Product.find({}).sort({ createdAt: -1 });
-    res.json(products);
+    res.json({ data: products });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
@@ -107,7 +107,7 @@ router.delete('/products/:id', async (req, res) => {
 router.get('/platforms', async (req, res) => {
   try {
     const platforms = await Platform.find({}).sort({ createdAt: -1 });
-    res.json(platforms);
+    res.json({ data: platforms });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
@@ -144,7 +144,7 @@ router.delete('/platforms/:id', async (req, res) => {
 router.get('/warehouses', async (req, res) => {
   try {
     const warehouses = await Warehouse.find({}).sort({ createdAt: -1 });
-    res.json(warehouses);
+    res.json({ data: warehouses });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
@@ -181,7 +181,7 @@ router.delete('/warehouses/:id', async (req, res) => {
 router.get('/salespeople', async (req, res) => {
   try {
     const salespeople = await Salesperson.find({}).sort({ createdAt: -1 });
-    res.json(salespeople);
+    res.json({ data: salespeople });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }

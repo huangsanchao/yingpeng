@@ -64,7 +64,7 @@ const form = ref({ name: '', code: '', address: '', contact: '', status: 'active
 async function loadData() {
   loading.value = true
   try {
-    warehouses.value = (await baseDataApi.getWarehouses()).data
+    warehouses.value = (await baseDataApi.getWarehouses()).data || []
   } catch (e) { console.error(e) }
   loading.value = false
 }

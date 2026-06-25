@@ -5,6 +5,8 @@ const productCostSchema = new mongoose.Schema({
   productId: { type: String },
   sku: { type: String },
   productName: { type: String },
+  productModel: { type: String },
+  category: { type: String },
   costPrice: { type: Number, default: 0 },
   updatedAt: { type: Date, default: Date.now },
   updatedBy: { type: String, default: 'system' }

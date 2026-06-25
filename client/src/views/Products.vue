@@ -8,12 +8,12 @@
     <el-card shadow="hover">
       <el-table :data="paginatedProducts" stripe v-loading="loading">
         <el-table-column prop="productName" label="商品名称" show-overflow-tooltip />
-        <el-table-column prop="sku" label="SKU" width="200" show-overflow-tooltip />
-        <el-table-column prop="productId" label="商品ID" width="150" />
+        <el-table-column prop="productModel" label="产品型号" width="180" show-overflow-tooltip />
+        <el-table-column prop="sku" label="SKU" width="160" show-overflow-tooltip />
+        <el-table-column prop="category" label="分类" width="120" />
         <el-table-column prop="costPrice" label="成本价" width="110">
           <template #default="{ row }">¥{{ (row.costPrice || 0).toFixed(2) }}</template>
         </el-table-column>
-        <el-table-column prop="category" label="分类" width="120" />
         <el-table-column label="操作" width="150">
           <template #default="{ row }">
             <el-button type="primary" link size="small" @click="showDialog('edit', row)">编辑</el-button>
@@ -22,24 +22,19 @@
         </el-table-column>
       </el-table>
       <div class="pagination">
-        <el-pagination
-          v-model:current-page="page"
-          v-model:page-size="pageSize"
-          :page-sizes="[10, 20, 50, 100]"
-          :total="products.length"
-          layout="total, sizes, prev, pager, next"
-        />
+        <el-pagination v-model:current-page="page" v-model:page-size="pageSize"
+          :page-sizes="[10, 20, 50, 100]" :total="products.length"
+          layout="total, sizes, prev, pager, next" />
       </div>
     </el-card>
 
-    <!-- 新增/编辑 -->
-    <el-dialog v-model="showAddDialog" :title="editMode === 'add' ? '新增商品' : '编辑商品'" width="500px">
+    <el-dialog v-model="showAddDialog" :title="editMode === 'add' ? '新增商品' : '编辑商品'" width="550px">
       <el-form :model="form" label-width="80px">
         <el-form-item label="商品名称"><el-input v-model="form.productName" placeholder="商品名称" /></el-form-item>
+        <el-form-item label="产品型号"><el-input v-model="form.productModel" placeholder="如：YBDK-55/100JMPX" /></el-form-item>
         <el-form-item label="SKU"><el-input v-model="form.sku" placeholder="SKU" /></el-form-item>
-        <el-form-item label="商品ID"><el-input v-model="form.productId" placeholder="商品ID" /></el-form-item>
+        <el-form-item label="分类"><el-input v-model="form.category" placeholder="如：防爆电动工具" /></el-form-item>
         <el-form-item label="成本价"><el-input-number v-model="form.costPrice" :min="0" :precision="2" style="width:100%" /></el-form-item>
-        <el-form-item label="分类"><el-input v-model="form.category" placeholder="分类" /></el-form-item>
       </el-form>
       <template #footer>
         <el-button @click="showAddDialog = false">取消</el-button>
@@ -61,7 +56,7 @@ const pageSize = ref(20)
 const showAddDialog = ref(false)
 const editMode = ref('add')
 const editingId = ref(null)
-const form = ref({ productName: '', sku: '', productId: '', costPrice: 0, category: '' })
+const form = ref({ productName: '', productModel: '', sku: '', costPrice: 0, category: '' })
 
 const paginatedProducts = computed(() => {
   const start = (page.value - 1) * pageSize.value
@@ -70,9 +65,8 @@ const paginatedProducts = computed(() => {
 
 async function loadData() {
   loading.value = true
-  try {
-    products.value = (await baseDataApi.getProducts()).data
-  } catch (e) { console.error(e) }
+  try { products.value = (await baseDataApi.getProducts()).data }
+  catch (e) { console.error(e) }
   loading.value = false
 }
 
@@ -80,10 +74,10 @@ function showDialog(mode, row) {
   editMode.value = mode
   if (mode === 'edit' && row) {
     editingId.value = row._id
-    form.value = { productName: row.productName, sku: row.sku, productId: row.productId, costPrice: row.costPrice || 0, category: row.category || '' }
+    form.value = { productName: row.productName, productModel: row.productModel || '', sku: row.sku, costPrice: row.costPrice || 0, category: row.category || '' }
   } else {
     editingId.value = null
-    form.value = { productName: '', sku: '', productId: '', costPrice: 0, category: '' }
+    form.value = { productName: '', productModel: '', sku: '', costPrice: 0, category: '' }
   }
   showAddDialog.value = true
 }
@@ -99,9 +93,7 @@ async function saveItem() {
     }
     showAddDialog.value = false
     loadData()
-  } catch (e) {
-    ElMessage.error(e.response?.data?.error || '操作失败')
-  }
+  } catch (e) { ElMessage.error(e.response?.data?.error || '操作失败') }
 }
 
 async function deleteItem(row) {
@@ -110,9 +102,7 @@ async function deleteItem(row) {
     await baseDataApi.deleteProduct(row._id)
     ElMessage.success('删除成功')
     loadData()
-  } catch (e) {
-    if (e !== 'cancel') ElMessage.error(e.response?.data?.error || '删除失败')
-  }
+  } catch (e) { if (e !== 'cancel') ElMessage.error(e.response?.data?.error || '删除失败') }
 }
 
 onMounted(loadData)

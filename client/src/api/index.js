@@ -57,6 +57,7 @@ export const contractsApi = {
   add(data) { return api.post('/contracts', data) },
   update(id, data) { return api.put(`/contracts/${id}`, data) },
   delete(id) { return api.delete(`/contracts/${id}`) },
+  batchDelete(ids) { return api.delete('/contracts/batch', { data: { ids } }) },
   exportExcel(params) { return api.get('/contracts/export', { params, responseType: 'blob' }) }
 }
 
