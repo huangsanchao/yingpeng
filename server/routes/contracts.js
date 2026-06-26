@@ -194,9 +194,22 @@ router.post('/import', upload.single('file'), async (req, res) => {
 
     if (rows.length === 0) return res.status(400).json({ error: '未识别到有效数据' });
 
-    const result = await SalesContract.insertMany(rows);
-    console.log(`[import] 导入 ${result.length} 条合同`);
-    res.json({ success: true, total: result.length });
+    // 按合同编号去重：已存在的更新，不存在的插入
+    let inserted = 0, updated = 0, skipped = 0;
+    for (const doc of rows) {
+      if (!doc.contractNo) { skipped++; continue; }
+      const existing = await SalesContract.findOne({ contractNo: doc.contractNo });
+      if (existing) {
+        await SalesContract.findByIdAndUpdate(existing._id, doc);
+        updated++;
+      } else {
+        await SalesContract.create(doc);
+        inserted++;
+      }
+    }
+
+    console.log(`[import] 新增 ${inserted} 条, 更新 ${updated} 条, 跳过 ${skipped} 条`);
+    res.json({ success: true, total: rows.length, inserted, updated, skipped });
   } catch (err) {
     console.error('[import] 错误:', err.message);
     res.status(500).json({ error: err.message });

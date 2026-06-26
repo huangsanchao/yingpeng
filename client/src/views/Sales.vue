@@ -412,8 +412,15 @@ function doExport() {
 
 // 导入
 function onImportOk(res) {
-  if(res.success) { ElMessage.success(`导入 ${res.total} 条`); showImport.value=false; loadData() }
-  else ElMessage.error(res.error||'导入失败')
+  if (res.success) {
+    let msg = `共 ${res.total} 条，新增 ${res.inserted} 条，更新 ${res.updated} 条`
+    if (res.skipped) msg += `，跳过 ${res.skipped} 条`
+    ElMessage.success(msg)
+    showImport.value = false
+    loadData()
+  } else {
+    ElMessage.error(res.error || '导入失败')
+  }
 }
 function onImportErr() { ElMessage.error('上传失败') }
 
