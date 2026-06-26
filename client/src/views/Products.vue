@@ -65,7 +65,10 @@ const paginatedProducts = computed(() => {
 
 async function loadData() {
   loading.value = true
-  try { products.value = (await baseDataApi.getProducts()).data }
+  try {
+    const res = await baseDataApi.getProducts()
+    products.value = res.data?.data || res.data || []
+  }
   catch (e) { console.error(e) }
   loading.value = false
 }

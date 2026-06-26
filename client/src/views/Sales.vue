@@ -314,9 +314,14 @@ function qt(v) { if(!v)return ''; const m=new Date(v).getMonth(); return m<3?'Q1
 // 数据加载
 async function loadBase() {
   try {
-    salespeopleList.value = (await baseDataApi.getSalespeople()).data||[]
-    platformsList.value = (await baseDataApi.getPlatforms()).data||[]
-    productsList.value = (await baseDataApi.getProducts()).data||[]
+    const [sp, pf, pr] = await Promise.all([
+      baseDataApi.getSalespeople(),
+      baseDataApi.getPlatforms(),
+      baseDataApi.getProducts()
+    ])
+    salespeopleList.value = sp.data?.data || sp.data || []
+    platformsList.value = pf.data?.data || pf.data || []
+    productsList.value = pr.data?.data || pr.data || []
   } catch(e) { console.error(e) }
 }
 async function loadData() { page.value=1; loadList() }
