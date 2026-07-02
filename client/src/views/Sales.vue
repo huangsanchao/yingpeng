@@ -5,14 +5,21 @@
       <div class="filter-bar">
         <el-date-picker v-model="dateRange" type="daterange" range-separator="至"
           start-placeholder="开始日期" end-placeholder="结束日期" value-format="YYYY-MM-DD"
-          style="width:240px" @change="loadData" />
-        <el-select v-model="salesperson" clearable filterable placeholder="销售员" style="width:130px;margin-left:10px" @change="loadData">
+          style="width:240px" />
+        <el-input v-model="contractNo" placeholder="合同编号" style="width:180px;margin-left:10px" clearable />
+        <el-select v-model="salesperson" clearable filterable placeholder="销售员" style="width:130px;margin-left:10px">
           <el-option v-for="s in salespeopleList" :key="s.name" :label="s.name" :value="s.name" />
         </el-select>
-        <el-select v-model="platform" clearable filterable placeholder="渠道平台" style="width:130px;margin-left:10px" @change="loadData">
+        <el-select v-model="platform" clearable filterable placeholder="渠道平台" style="width:130px;margin-left:10px">
           <el-option label="全部" value="" />
           <el-option v-for="p in platformsList" :key="p.name" :label="p.name" :value="p.name" />
         </el-select>
+        <el-select v-model="matchStatus" placeholder="到账状态" style="width:120px;margin-left:10px" clearable>
+          <el-option label="已到账" value="settled" />
+          <el-option label="未到账" value="pending" />
+        </el-select>
+        <el-button type="primary" style="margin-left:10px" @click="loadData">搜索</el-button>
+        <el-button @click="resetSearch">重置</el-button>
       </div>
       <div class="btn-bar">
         <el-button type="primary" @click="openAdd">
@@ -30,12 +37,29 @@
       </div>
     </div>
 
+    <!-- 到账统计 KPI -->
+    <el-row :gutter="16" class="kpi-row">
+      <el-col :span="8"><el-card shadow="hover"><div class="kpi"><div class="kpi-label">已到账</div><div class="kpi-value" style="color:#67c23a">{{ stats.settled }} 笔 / ¥{{ fmt(stats.settledAmount) }}</div></div></el-card></el-col>
+      <el-col :span="8"><el-card shadow="hover"><div class="kpi"><div class="kpi-label">未到账</div><div class="kpi-value" style="color:#f56c6c">{{ stats.pending }} 笔</div></div></el-card></el-col>
+      <el-col :span="8"><el-card shadow="hover"><div class="kpi"><div class="kpi-label">合计</div><div class="kpi-value" style="color:#409eff">{{ stats.total }} 笔</div></div></el-card></el-col>
+    </el-row>
+
     <!-- 合同表格 -->
     <el-card shadow="hover" class="table-card">
-      <el-table :data="contracts" stripe v-loading="loading" @selection-change="onSelect" height="calc(100vh - 220px)">
+      <el-table :data="contracts" stripe v-loading="loading" @selection-change="onSelect" height="calc(100vh - 300px)">
         <el-table-column type="selection" width="45" fixed="left" />
+        <el-table-column label="到账" width="70" fixed="left">
+          <template #default="{ row }">
+            <el-tag :type="row.matchStatus==='settled'?'success':'danger'" size="small">{{ row.matchStatus==='settled'?'已到':'未到' }}</el-tag>
+          </template>
+        </el-table-column>
         <el-table-column prop="salesperson" label="销售人员" width="100" />
-        <el-table-column prop="contractNo" label="合同编号" width="180" show-overflow-tooltip />
+        <el-table-column label="合同编号" width="280" show-overflow-tooltip>
+          <template #default="{ row }">
+            <span>{{ row.contractNo }}</span>
+            <el-icon style="margin-left:6px;cursor:pointer;color:#409eff" @click="copyText(row.contractNo)"><CopyDocument /></el-icon>
+          </template>
+        </el-table-column>
         <el-table-column prop="customerName" label="客户名称" width="150" show-overflow-tooltip />
         <el-table-column prop="channel" label="成交渠道" width="100" />
         <el-table-column prop="brand" label="品牌" width="80" />
@@ -213,6 +237,9 @@
     <!-- 详情弹窗 -->
     <el-dialog v-model="showDetail" title="合同详情" width="950px">
       <el-descriptions :column="3" border v-if="detail">
+        <el-descriptions-item label="到账状态">
+          <el-tag :type="detail.matchStatus==='settled'?'success':'danger'">{{ detail.matchStatus==='settled'?'已到账':'未到账' }}</el-tag>
+        </el-descriptions-item>
         <el-descriptions-item label="合同编号">{{ detail.contractNo }}</el-descriptions-item>
         <el-descriptions-item label="销售人员">{{ detail.salesperson||'-' }}</el-descriptions-item>
         <el-descriptions-item label="成交渠道">{{ detail.channel||'-' }}</el-descriptions-item>
@@ -267,17 +294,19 @@
 
 <script setup>
 import { ref, computed, onMounted } from 'vue'
-import { Plus, Download, Upload, UploadFilled, Delete } from '@element-plus/icons-vue'
+import { Plus, Download, Upload, UploadFilled, Delete, CopyDocument } from '@element-plus/icons-vue'
 import { ElMessage, ElMessageBox } from 'element-plus'
 import { contractsApi, baseDataApi } from '../api'
+import api from '../api'
 
 // 状态
-const dateRange = ref([]), salesperson = ref(''), platform = ref('')
+const dateRange = ref([]), salesperson = ref(''), platform = ref(''), contractNo = ref(''), matchStatus = ref('')
 const contracts = ref([]), total = ref(0), page = ref(1), pageSize = ref(20)
 const loading = ref(false), saving = ref(false)
 const showForm = ref(false), showDetail = ref(false), showImport = ref(false)
 const formMode = ref('add'), editingId = ref(null), selectedIds = ref([]), detail = ref(null)
 const salespeopleList = ref([]), platformsList = ref([]), productsList = ref([])
+const stats = ref({ settled: 0, pending: 0, total: 0, settledAmount: 0 })
 
 const headers = computed(() => {
   const t = localStorage.getItem('token')
@@ -302,7 +331,11 @@ const blank = {
 const form = ref({...blank})
 
 // 工具函数
-function money(v) { return (v||0).toLocaleString('zh-CN',{minimumFractionDigits:2}) }
+function fmt(v) { return (v||0).toLocaleString('zh-CN',{minimumFractionDigits:2}) }
+function copyText(text) {
+  navigator.clipboard.writeText(text).then(() => ElMessage.success('已复制')).catch(() => ElMessage.error('复制失败'))
+}
+function money(v) { return fmt(v) }
 function d(v) { return v ? new Date(v).toLocaleDateString('zh-CN') : '-' }
 function priceRange(p) {
   if(!p||p===0) return ''; if(p<100) return '100元以下'; if(p<500) return '100~500元';
@@ -324,7 +357,12 @@ async function loadBase() {
     productsList.value = pr.data?.data || pr.data || []
   } catch(e) { console.error(e) }
 }
-async function loadData() { page.value=1; loadList() }
+async function loadData() { page.value=1; loadList(); loadStats() }
+
+function resetSearch() {
+  dateRange.value=[]; contractNo.value=''; salesperson.value=''; platform.value=''; matchStatus.value=''
+  loadData()
+}
 async function loadList() {
   loading.value = true
   try {
@@ -332,6 +370,8 @@ async function loadList() {
     if(dateRange.value?.length===2) { p.startDate=dateRange.value[0]; p.endDate=dateRange.value[1] }
     if(salesperson.value) p.salesperson = salesperson.value
     if(platform.value) p.platform = platform.value
+    if(contractNo.value) p.contractNo = contractNo.value
+    if(matchStatus.value) p.matchStatus = matchStatus.value
     const r = (await contractsApi.getList(p)).data
     contracts.value = r.data||[]; total.value = r.total||0
   } catch(e) { console.error(e) }
@@ -339,6 +379,13 @@ async function loadList() {
 }
 
 // 选择
+async function loadStats() {
+  try {
+    const r = (await api.get('/contracts/settlement-stats')).data
+    stats.value = r
+  } catch(e) { console.error(e) }
+}
+
 function onSelect(rows) { selectedIds.value = rows.map(r=>r._id) }
 
 // 新增
@@ -429,13 +476,17 @@ function onImportOk(res) {
 }
 function onImportErr() { ElMessage.error('上传失败') }
 
-onMounted(() => { loadBase(); loadData() })
+onMounted(() => { loadBase(); loadData(); loadStats() })
 </script>
 
 <style scoped>
 .toolbar { display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:16px; flex-wrap:wrap; gap:10px }
 .filter-bar { display:flex; align-items:center; flex-wrap:wrap }
 .btn-bar { display:flex; gap:8px; flex-wrap:wrap }
+.kpi-row { margin-bottom:16px }
+.kpi { text-align:center }
+.kpi-label { font-size:13px; color:#909399 }
+.kpi-value { font-size:24px; font-weight:700; margin-top:4px }
 .pagination { margin-top:12px; display:flex; justify-content:flex-end }
 .table-card :deep(.el-card__body) { padding:12px }
 </style>

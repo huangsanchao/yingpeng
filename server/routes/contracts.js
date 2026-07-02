@@ -110,7 +110,7 @@ function calcField(c, key) {
 // 分页列表
 router.get('/list', async (req, res) => {
   try {
-    const { startDate, endDate, platform, salesperson, channel, page = 1, pageSize = 20 } = req.query;
+    const { startDate, endDate, platform, salesperson, channel, contractNo, matchStatus, page = 1, pageSize = 20 } = req.query;
     const filter = {};
 
     if (startDate && endDate) {
@@ -125,14 +125,90 @@ router.get('/list', async (req, res) => {
     if (channel) {
       filter.channel = { $regex: channel, $options: 'i' };
     }
+    if (contractNo) {
+      filter.contractNo = { $regex: contractNo, $options: 'i' };
+    }
 
-    const total = await SalesContract.countDocuments(filter);
-    const data = await SalesContract.find(filter)
-      .sort({ orderDate: -1 })
-      .skip((page - 1) * pageSize)
-      .limit(parseInt(pageSize));
+    // 到账匹配：获取账单列表所有订单号
+    const PlatformOrder = require('../models/PlatformOrder');
+    const billingOrders = await PlatformOrder.find({}).select('orderNo subOrderNo merchantOrderNo').lean();
+    const billingNos = new Set();
+    const cleanNo = (s) => String(s || '').replace(/^["']+|["']+$/g, '').replace(/^T200P?/i, '');
+    billingOrders.forEach(b => {
+      [b.orderNo, b.subOrderNo, b.merchantOrderNo].forEach(no => {
+        const cleaned = cleanNo(no);
+        if (cleaned) {
+          billingNos.add(cleaned);
+          billingNos.add(no);
+        }
+      });
+    });
 
-    res.json({ total, page: parseInt(page), pageSize: parseInt(pageSize), data });
+    // 如果有到账状态筛选，需要全部取出后过滤再分页
+    let allData;
+    if (matchStatus) {
+      allData = await SalesContract.find(filter).sort({ orderDate: -1 }).lean();
+      allData = allData.filter(c => {
+        let orderNo = String(c.contractNo || '');
+        const m = orderNo.match(/订单号[：:]\s*(.+)/i);
+        if (m) orderNo = m[1].trim();
+        const cn = orderNo.replace(/^T200P?/i, '');
+        const settled = billingNos.has(cn) || billingNos.has(orderNo);
+        return matchStatus === 'settled' ? settled : !settled;
+      });
+    }
+
+    const total = matchStatus ? allData.length : await SalesContract.countDocuments(filter);
+    const data = matchStatus
+      ? allData.slice((page - 1) * pageSize, page * pageSize)
+      : await SalesContract.find(filter).sort({ orderDate: -1 }).skip((page - 1) * pageSize).limit(parseInt(pageSize)).lean();
+
+    // 为每条合同添加 matchStatus
+    const enriched = data.map(c => {
+      let orderNo = String(c.contractNo || '');
+      const m = orderNo.match(/订单号[：:]\s*(.+)/i);
+      if (m) orderNo = m[1].trim();
+      const cn = orderNo.replace(/^T200P?/i, '');
+      c.matchStatus = billingNos.has(cn) || billingNos.has(orderNo) ? 'settled' : 'pending';
+      return c;
+    });
+
+    // 统计
+    const settledCount = enriched.filter(c => c.matchStatus === 'settled').length;
+    console.log(`[match] 本页已到: ${settledCount}/${enriched.length}`);
+
+    res.json({ total, page: parseInt(page), pageSize: parseInt(pageSize), data: enriched });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// 到账统计
+router.get('/settlement-stats', async (req, res) => {
+  try {
+    const PlatformOrder = require('../models/PlatformOrder');
+    const billingOrders = await PlatformOrder.find({}).select('orderNo').lean();
+    const billingNos = new Set();
+    billingOrders.forEach(b => {
+      const no = b.orderNo.replace(/^T200P?/i, '');
+      billingNos.add(no);
+      billingNos.add(b.orderNo);
+    });
+
+    const allContracts = await SalesContract.find({}).lean();
+    let settled = 0, pending = 0, settledAmount = 0;
+    allContracts.forEach(c => {
+      let orderNo = c.contractNo.includes('订单号') ? c.contractNo.replace(/.*订单号[：:]\s*/i, '').trim() : c.contractNo;
+      const cleanNo = orderNo.replace(/^T200P?/i, '');
+      if (billingNos.has(cleanNo) || billingNos.has(orderNo)) {
+        settled++;
+        settledAmount += (c.totalAmount || 0);
+      } else {
+        pending++;
+      }
+    });
+
+    res.json({ settled, pending, total: allContracts.length, settledAmount });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
